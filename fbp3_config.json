@@ -2,13 +2,13 @@
     "pipeline_setting": {
         "train": true,
         "test": false,
-        "checkpoint_dir": "./saved/model",
+        "checkpoint_dir": "./saved/model/fine_tuned_meanpool/",
         "resume": false,
-        "state_dict": "/",
-        "name": "MPLTrainer",
-        "loop": "mpl_loop",
-        "dataset": "MPLDataset",
-        "model_arch": "MPLModel",
+        "state_dict": "MPL_Student_microsoft-deberta-v3-large_state_dict.pth",
+        "name": "FBPTrainer",
+        "loop": "train_loop",
+        "dataset": "FBPDataset",
+        "model_arch": "FBPModel",
         "model": "microsoft/deberta-v3-large",
         "pooling": "MeanPooling"
     },
@@ -23,19 +23,20 @@
     },
     "data_settings": {
         "n_folds": 5,
-        "max_len": 512,
-        "epochs": 5,
-        "batch_size": 16
+        "max_len": 1536,
+        "epochs": 10,
+        "batch_size": 8
     },
     "gradient_settings": {
-        "amp_scaler": true,
+        "amp_scaler": false,
         "gradient_checkpoint": true,
         "clipping_grad": true,
         "n_gradient_accumulation_steps": 1,
-        "max_grad_norm": 10
+        "max_grad_norm": 1
     },
     "loss_options": {
-        "loss_fn": "WeightMCRMSELoss",
+        "loss_fn": "SmoothL1Loss",
+        "val_loss_fn": "MCRMSELoss",
         "reduction": "mean"
     },
     "metrics_options": {
@@ -60,13 +61,15 @@
     "swa_options": {
         "swa": true,
         "swa_lr": 5e-6,
-        "anneal_epochs": 2,
+        "anneal_epochs": 1,
         "anneal_strategy": "cos"
     },
     "model_utils": {
-        "freeze": false,
+        "stop_mode": "min",
+        "freeze": true,
+        "num_freeze": 4,
         "reinit": true,
-        "num_reinit": 5,
+        "num_reinit": 2,
         "awp": false,
         "nth_awp_start_epoch": 0,
         "awp_eps": 1e-2,

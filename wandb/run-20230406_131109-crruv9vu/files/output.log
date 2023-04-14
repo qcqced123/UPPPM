@@ -1,0 +1,13 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.bias', 'mask_predictions.LayerNorm.weight', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.classifier.bias', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 39, in <module>
+    main('fbp3_config.json', CFG)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 20, in main
+    train_loop(cfg)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/train_loop.py", line 34, in train_loop
+    lr_scheduler, swa_scheduler, awp, save_parameter = train_input.model_setting(len(train))
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/trainer.py", line 69, in model_setting
+    optimizer = getattr(transformers, self.cfg.optimizer)(
+TypeError: __init__() got an unexpected keyword argument 'optimizer'

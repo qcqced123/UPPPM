@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 import model.pooling as pooling
 from torch import Tensor
@@ -19,13 +20,18 @@ class FBPModel(nn.Module):
         )
         self.fc = nn.Linear(self.auto_cfg.hidden_size, 6)
         self.pooling = getattr(pooling, cfg.pooling)(self.auto_cfg)
-        self._init_weights(self.fc)
+        self.model.load_state_dict(
+            torch.load(cfg.checkpoint_dir + cfg.state_dict),
+            strict=False
+        )  # load student model's weight: it already has fc layer, so need to init fc layer later
 
         if cfg.reinit:
+            self._init_weights(self.fc)
             reinit_topk(self.model, cfg.num_reinit)
 
         if cfg.freeze:
-            freeze(self.model)
+            freeze(self.model.embeddings)
+            freeze(self.model.encoder.layer[:cfg.num_freeze])
 
         if cfg.gradient_checkpoint:
             self.model.gradient_checkpointing_enable()
@@ -73,9 +79,9 @@ class MPLModel(nn.Module):
         )
         self.fc = nn.Linear(self.auto_cfg.hidden_size, 6)
         self.pooling = getattr(pooling, cfg.pooling)(self.auto_cfg)
-        self._init_weights(self.fc)
 
         if cfg.reinit:
+            self._init_weights(self.fc)
             reinit_topk(self.model, cfg.num_reinit)
 
         if cfg.freeze:
@@ -84,7 +90,7 @@ class MPLModel(nn.Module):
         if cfg.gradient_checkpoint:
             self.model.gradient_checkpointing_enable()
 
-    def _init_weights(self, module) -> None:
+    def _init_weights(self, module):
         """ over-ride initializes weights of the given module function (+initializes LayerNorm) """
         if isinstance(module, nn.Linear):
             module.weight.data.normal_(mean=0.0, std=self.auto_cfg.initializer_range)

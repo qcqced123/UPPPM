@@ -1,0 +1,71 @@
+2023-04-06 13:25:02,389 INFO    StreamThr :2253 [internal.py:wandb_internal():87] W&B internal server running at pid: 2253, started at: 2023-04-06 13:25:02.389510
+2023-04-06 13:25:02,390 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status
+2023-04-06 13:25:02,395 INFO    WriterThread:2253 [datastore.py:open_for_write():85] open: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/run-r68e7r9v.wandb
+2023-04-06 13:25:02,395 DEBUG   SenderThread:2253 [sender.py:send():334] send: header
+2023-04-06 13:25:02,416 DEBUG   SenderThread:2253 [sender.py:send():334] send: run
+2023-04-06 13:25:02,996 INFO    SenderThread:2253 [dir_watcher.py:__init__():216] watching files in: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files
+2023-04-06 13:25:02,996 INFO    SenderThread:2253 [sender.py:_start_run_threads():1065] run started: r68e7r9v with start time 1680755102.388594
+2023-04-06 13:25:02,996 DEBUG   SenderThread:2253 [sender.py:send_request():361] send_request: summary_record
+2023-04-06 13:25:02,996 INFO    SenderThread:2253 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-04-06 13:25:02,999 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: check_version
+2023-04-06 13:25:02,999 DEBUG   SenderThread:2253 [sender.py:send_request():361] send_request: check_version
+2023-04-06 13:25:03,052 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: run_start
+2023-04-06 13:25:03,060 DEBUG   HandlerThread:2253 [system_info.py:__init__():31] System info init
+2023-04-06 13:25:03,060 DEBUG   HandlerThread:2253 [system_info.py:__init__():46] System info init done
+2023-04-06 13:25:03,061 INFO    HandlerThread:2253 [system_monitor.py:start():151] Starting system monitor
+2023-04-06 13:25:03,061 INFO    SystemMonitor:2253 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-04-06 13:25:03,061 INFO    HandlerThread:2253 [system_monitor.py:probe():172] Collecting system info
+2023-04-06 13:25:03,061 INFO    SystemMonitor:2253 [interfaces.py:start():168] Started cpu
+2023-04-06 13:25:03,061 INFO    SystemMonitor:2253 [interfaces.py:start():168] Started disk
+2023-04-06 13:25:03,061 INFO    SystemMonitor:2253 [interfaces.py:start():168] Started gpuapple
+2023-04-06 13:25:03,063 INFO    SystemMonitor:2253 [interfaces.py:start():168] Started memory
+2023-04-06 13:25:03,064 DEBUG   HandlerThread:2253 [system_info.py:probe():195] Probing system
+2023-04-06 13:25:03,065 INFO    SystemMonitor:2253 [interfaces.py:start():168] Started network
+2023-04-06 13:25:03,068 DEBUG   HandlerThread:2253 [system_info.py:_probe_git():180] Probing git
+2023-04-06 13:25:03,088 DEBUG   HandlerThread:2253 [system_info.py:_probe_git():188] Probing git done
+2023-04-06 13:25:03,088 DEBUG   HandlerThread:2253 [system_info.py:probe():241] Probing system done
+2023-04-06 13:25:03,088 DEBUG   HandlerThread:2253 [system_monitor.py:probe():181] {'os': 'macOS-13.1-arm64-arm-64bit', 'python': '3.9.4', 'heartbeatAt': '2023-04-06T04:25:03.065032', 'startedAt': '2023-04-06T04:25:02.371135', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/qcqced123/FeedBackPrize_3.git', 'commit': '4683d91dd0e7b1673d6fa5b3e6dc643010e68fe2'}, 'email': '97833081+qcqced123@users.noreply.github.com', 'root': '/Users/qcqced/Desktop/GitHub/FeedBackPrize_3', 'host': 'qcqced-MacBook-Pro.local', 'username': 'qcqced', 'executable': '/Users/qcqced/Desktop/SAMSUNG/venv/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'disk': {'total': 460.4317207336426, 'used': 10.966255187988281}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-04-06 13:25:03,089 INFO    HandlerThread:2253 [system_monitor.py:probe():182] Finished collecting system info
+2023-04-06 13:25:03,089 INFO    HandlerThread:2253 [system_monitor.py:probe():185] Publishing system info
+2023-04-06 13:25:03,089 DEBUG   HandlerThread:2253 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-06 13:25:03,089 DEBUG   HandlerThread:2253 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-06 13:25:03,090 INFO    HandlerThread:2253 [system_monitor.py:probe():187] Finished publishing system info
+2023-04-06 13:25:03,095 DEBUG   SenderThread:2253 [sender.py:send():334] send: files
+2023-04-06 13:25:03,095 INFO    SenderThread:2253 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2023-04-06 13:25:03,099 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-06 13:25:03,099 DEBUG   SenderThread:2253 [sender.py:send_request():361] send_request: stop_status
+2023-04-06 13:25:03,317 DEBUG   SenderThread:2253 [sender.py:send():334] send: telemetry
+2023-04-06 13:25:03,836 INFO    Thread-16 :2253 [upload_job.py:push():143] Uploaded file /var/folders/l1/l_9fgbw95hl79rj750047d1c0000gn/T/tmp_ejk8unhwandb/s66f8jdy-wandb-metadata.json
+2023-04-06 13:25:04,001 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/wandb-metadata.json
+2023-04-06 13:25:04,001 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/wandb-summary.json
+2023-04-06 13:25:04,001 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/requirements.txt
+2023-04-06 13:25:06,008 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/output.log
+2023-04-06 13:25:07,802 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:08,211 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/output.log
+2023-04-06 13:25:09,215 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/output.log
+2023-04-06 13:25:12,822 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:17,835 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:18,100 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-06 13:25:22,851 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:23,123 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-06 13:25:27,867 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:28,146 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-06 13:25:32,898 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:33,164 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-06 13:25:33,312 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/config.yaml
+2023-04-06 13:25:38,188 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:43,211 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:48,224 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:53,243 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:25:58,259 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:26:03,069 DEBUG   SystemMonitor:2253 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-04-06 13:26:03,075 DEBUG   SenderThread:2253 [sender.py:send():334] send: telemetry
+2023-04-06 13:26:03,075 DEBUG   SenderThread:2253 [sender.py:send():334] send: stats
+2023-04-06 13:26:04,083 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:26:04,444 INFO    Thread-13 :2253 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_132502-r68e7r9v/files/config.yaml
+2023-04-06 13:26:09,341 DEBUG   HandlerThread:2253 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:26:13,271 ERROR   memory    :2253 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=2242)
+2023-04-06 13:26:13,272 ERROR   memory    :2253 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=2242)
+2023-04-06 13:26:13,283 ERROR   cpu       :2253 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=2242)
+2023-04-06 13:26:13,283 ERROR   cpu       :2253 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=2242)
+2023-04-06 13:26:13,422 INFO    MainThread:2253 [internal.py:handle_exit():77] Internal process exited

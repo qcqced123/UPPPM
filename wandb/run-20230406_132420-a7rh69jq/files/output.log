@@ -1,0 +1,25 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['mask_predictions.classifier.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.dense.weight', 'mask_predictions.classifier.bias', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.dense.bias', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.dense.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/torch/cuda/amp/grad_scaler.py:120: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  warnings.warn("torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.")
+                                                                                                                        /Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/torch/amp/autocast_mode.py:204: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn('User provided device_type of \'cuda\', but CUDA is not available. Disabling')   | 0/97 [00:00<?, ?it/s]
+  0%|                                                                                            | 0/97 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 39, in <module>
+    main('fbp3_config.json', CFG)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 20, in main
+    train_loop(cfg)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/train_loop.py", line 38, in train_loop
+    train_loss, grad_norm, lr = train_input.train_fn(
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/trainer.py", line 110, in train_fn
+    preds = model(inputs)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/model/model.py", line 53, in forward
+    outputs = self.feature(**inputs)
+TypeError: feature() got an unexpected keyword argument 'input_ids'
+[1/5] Train & Validation

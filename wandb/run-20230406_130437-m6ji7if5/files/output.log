@@ -1,0 +1,57 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.dense.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.classifier.weight', 'mask_predictions.classifier.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.dense.weight', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 39, in <module>
+    main('fbp3_config.json', CFG)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 20, in main
+    train_loop(cfg)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/train_loop.py", line 34, in train_loop
+    lr_scheduler, swa_scheduler, awp, save_parameter = train_input.model_setting(len(train))
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/trainer.py", line 58, in model_setting
+    print(model.embeddings)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'FBPModel' object has no attribute 'embeddings'
+FBPModel(
+  (backbone): DebertaV2Model(
+    (embeddings): DebertaV2Embeddings(
+      (word_embeddings): Embedding(128100, 1024, padding_idx=0)
+      (LayerNorm): LayerNorm((1024,), eps=1e-07, elementwise_affine=True)
+      (dropout): StableDropout()
+    )
+    (encoder): DebertaV2Encoder(
+      (layer): ModuleList(
+        (0-23): 24 x DebertaV2Layer(
+          (attention): DebertaV2Attention(
+            (self): DisentangledSelfAttention(
+              (query_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (key_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (value_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (pos_dropout): StableDropout()
+              (dropout): StableDropout()
+            )
+            (output): DebertaV2SelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (LayerNorm): LayerNorm((1024,), eps=1e-07, elementwise_affine=True)
+              (dropout): StableDropout()
+            )
+          )
+          (intermediate): DebertaV2Intermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): DebertaV2Output(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-07, elementwise_affine=True)
+            (dropout): StableDropout()
+          )
+        )
+      )
+      (rel_embeddings): Embedding(512, 1024)
+      (LayerNorm): LayerNorm((1024,), eps=1e-07, elementwise_affine=True)
+    )
+  )
+  (fc): Linear(in_features=1024, out_features=6, bias=True)
+  (pooling): MeanPooling()
+)

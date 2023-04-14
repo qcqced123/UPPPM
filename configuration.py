@@ -7,7 +7,7 @@ class CFG:
     """ Pipeline Setting """
     train, test = True, False
     checkpoint_dir = './saved/model'
-    resume, state_dict = False, '/'
+    resume, state_dict = True, '/'
     name = 'FBP3_Base_Train_Pipeline'
     loop = 'mpl_loop'
     dataset = 'FBPDataset'  # dataset_class.dataclass.py -> FBPDataset, MPLDataset
@@ -18,7 +18,7 @@ class CFG:
 
     """ Common Options """
     wandb = True
-    optuna = True  # if you want to tune hyperparameter, set True
+    optuna = False  # if you want to tune hyperparameter, set True
     competition = 'FB3'
     seed = 42
     cfg_name = 'CFG'
@@ -34,21 +34,22 @@ class CFG:
     batch_size = 64
 
     """ Gradient Options """
-    amp_scaler = True
+    amp_scaler = False
     gradient_checkpoint = True  # save parameter
     clipping_grad = True  # clip_grad_norm
     n_gradient_accumulation_steps = 1
     max_grad_norm = 1000
 
     """ Loss & Metrics Options """
-    loss_fn = 'WeightedMSELoss'
+    loss_fn = 'SmoothL1Loss'
+    val_loss_fn = 'WeightedMSELoss'
     reduction = 'mean'
     metrics = ['MCRMSE', 'f_beta', 'recall']
 
     """ Optimizer with LLRD Options """
     optimizer = 'AdamW'  # options: SWA, AdamW
     llrd = True
-    layerwise_lr = 5e-5
+    layerwise_lr = 5e-6
     layerwise_lr_decay = 0.9
     layerwise_weight_decay = 1e-2
     layerwise_adam_epsilon = 1e-6
@@ -69,9 +70,11 @@ class CFG:
     anneal_strategy = 'cos'  # default = cos, available option: linear
 
     """ Model_Utils Options """
+    stop_mode = 'min'
     freeze = False
+    num_freeze = 2
     reinit = True
-    num_reinit = 5
+    num_reinit = 0
     awp = False
     nth_awp_start_epoch = 10
     awp_eps = 1e-2

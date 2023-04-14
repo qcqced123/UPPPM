@@ -1,0 +1,174 @@
+2023-04-06 13:13:27,477 INFO    StreamThr :1980 [internal.py:wandb_internal():87] W&B internal server running at pid: 1980, started at: 2023-04-06 13:13:27.477356
+2023-04-06 13:13:27,478 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: status
+2023-04-06 13:13:27,483 INFO    WriterThread:1980 [datastore.py:open_for_write():85] open: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/run-wbbi1ec9.wandb
+2023-04-06 13:13:27,483 DEBUG   SenderThread:1980 [sender.py:send():334] send: header
+2023-04-06 13:13:27,504 DEBUG   SenderThread:1980 [sender.py:send():334] send: run
+2023-04-06 13:13:28,107 INFO    SenderThread:1980 [dir_watcher.py:__init__():216] watching files in: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files
+2023-04-06 13:13:28,107 INFO    SenderThread:1980 [sender.py:_start_run_threads():1065] run started: wbbi1ec9 with start time 1680754407.476432
+2023-04-06 13:13:28,107 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: summary_record
+2023-04-06 13:13:28,107 INFO    SenderThread:1980 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-04-06 13:13:28,110 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: check_version
+2023-04-06 13:13:28,110 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: check_version
+2023-04-06 13:13:28,163 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: run_start
+2023-04-06 13:13:28,173 DEBUG   HandlerThread:1980 [system_info.py:__init__():31] System info init
+2023-04-06 13:13:28,173 DEBUG   HandlerThread:1980 [system_info.py:__init__():46] System info init done
+2023-04-06 13:13:28,173 INFO    HandlerThread:1980 [system_monitor.py:start():151] Starting system monitor
+2023-04-06 13:13:28,173 INFO    SystemMonitor:1980 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-04-06 13:13:28,173 INFO    HandlerThread:1980 [system_monitor.py:probe():172] Collecting system info
+2023-04-06 13:13:28,173 DEBUG   HandlerThread:1980 [system_info.py:probe():195] Probing system
+2023-04-06 13:13:28,173 INFO    SystemMonitor:1980 [interfaces.py:start():168] Started cpu
+2023-04-06 13:13:28,174 INFO    SystemMonitor:1980 [interfaces.py:start():168] Started disk
+2023-04-06 13:13:28,176 INFO    SystemMonitor:1980 [interfaces.py:start():168] Started gpuapple
+2023-04-06 13:13:28,177 INFO    SystemMonitor:1980 [interfaces.py:start():168] Started memory
+2023-04-06 13:13:28,177 INFO    SystemMonitor:1980 [interfaces.py:start():168] Started network
+2023-04-06 13:13:28,182 DEBUG   HandlerThread:1980 [system_info.py:_probe_git():180] Probing git
+2023-04-06 13:13:28,203 DEBUG   HandlerThread:1980 [system_info.py:_probe_git():188] Probing git done
+2023-04-06 13:13:28,203 DEBUG   HandlerThread:1980 [system_info.py:probe():241] Probing system done
+2023-04-06 13:13:28,203 DEBUG   HandlerThread:1980 [system_monitor.py:probe():181] {'os': 'macOS-13.1-arm64-arm-64bit', 'python': '3.9.4', 'heartbeatAt': '2023-04-06T04:13:28.173933', 'startedAt': '2023-04-06T04:13:27.459643', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/qcqced123/FeedBackPrize_3.git', 'commit': '4683d91dd0e7b1673d6fa5b3e6dc643010e68fe2'}, 'email': '97833081+qcqced123@users.noreply.github.com', 'root': '/Users/qcqced/Desktop/GitHub/FeedBackPrize_3', 'host': 'qcqced-MacBook-Pro.local', 'username': 'qcqced', 'executable': '/Users/qcqced/Desktop/SAMSUNG/venv/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'disk': {'total': 460.4317207336426, 'used': 10.966255187988281}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-04-06 13:13:28,203 INFO    HandlerThread:1980 [system_monitor.py:probe():182] Finished collecting system info
+2023-04-06 13:13:28,203 INFO    HandlerThread:1980 [system_monitor.py:probe():185] Publishing system info
+2023-04-06 13:13:28,203 DEBUG   HandlerThread:1980 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-06 13:13:28,204 DEBUG   HandlerThread:1980 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-06 13:13:28,204 INFO    HandlerThread:1980 [system_monitor.py:probe():187] Finished publishing system info
+2023-04-06 13:13:28,209 DEBUG   SenderThread:1980 [sender.py:send():334] send: files
+2023-04-06 13:13:28,209 INFO    SenderThread:1980 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2023-04-06 13:13:28,212 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-06 13:13:28,213 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: stop_status
+2023-04-06 13:13:28,430 DEBUG   SenderThread:1980 [sender.py:send():334] send: telemetry
+2023-04-06 13:13:28,930 INFO    Thread-16 :1980 [upload_job.py:push():143] Uploaded file /var/folders/l1/l_9fgbw95hl79rj750047d1c0000gn/T/tmpoam3lul7wandb/wsif9qrj-wandb-metadata.json
+2023-04-06 13:13:29,110 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-metadata.json
+2023-04-06 13:13:29,110 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/requirements.txt
+2023-04-06 13:13:29,110 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-summary.json
+2023-04-06 13:13:31,117 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/output.log
+2023-04-06 13:13:31,894 DEBUG   SenderThread:1980 [sender.py:send():334] send: exit
+2023-04-06 13:13:31,894 INFO    SenderThread:1980 [sender.py:send_exit():557] handling exit code: 1
+2023-04-06 13:13:31,894 INFO    SenderThread:1980 [sender.py:send_exit():559] handling runtime: 3
+2023-04-06 13:13:31,894 INFO    SenderThread:1980 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-04-06 13:13:31,894 INFO    SenderThread:1980 [sender.py:send_exit():565] send defer
+2023-04-06 13:13:31,894 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,895 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-06 13:13:31,895 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,895 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 0
+2023-04-06 13:13:31,895 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 1
+2023-04-06 13:13:31,895 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,895 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-06 13:13:31,895 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,895 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 1
+2023-04-06 13:13:31,895 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 2
+2023-04-06 13:13:31,895 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,895 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-06 13:13:31,895 INFO    HandlerThread:1980 [system_monitor.py:finish():161] Stopping system monitor
+2023-04-06 13:13:31,915 DEBUG   SystemMonitor:1980 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-04-06 13:13:31,915 INFO    HandlerThread:1980 [interfaces.py:finish():175] Joined cpu
+2023-04-06 13:13:31,915 DEBUG   SystemMonitor:1980 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-04-06 13:13:31,915 INFO    HandlerThread:1980 [interfaces.py:finish():175] Joined disk
+2023-04-06 13:13:31,915 DEBUG   SystemMonitor:1980 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-04-06 13:13:31,916 INFO    HandlerThread:1980 [interfaces.py:finish():175] Joined gpuapple
+2023-04-06 13:13:31,916 INFO    HandlerThread:1980 [interfaces.py:finish():175] Joined memory
+2023-04-06 13:13:31,916 INFO    HandlerThread:1980 [interfaces.py:finish():175] Joined network
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 2
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 3
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send():334] send: telemetry
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send():334] send: stats
+2023-04-06 13:13:31,917 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,917 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 3
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 4
+2023-04-06 13:13:31,917 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,917 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 4
+2023-04-06 13:13:31,917 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 5
+2023-04-06 13:13:31,917 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,917 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-06 13:13:31,917 DEBUG   SenderThread:1980 [sender.py:send():334] send: summary
+2023-04-06 13:13:31,918 INFO    SenderThread:1980 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-04-06 13:13:31,918 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,918 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 5
+2023-04-06 13:13:31,918 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 6
+2023-04-06 13:13:31,918 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:31,918 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-06 13:13:31,918 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:31,918 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 6
+2023-04-06 13:13:31,920 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: status_report
+2023-04-06 13:13:32,123 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-summary.json
+2023-04-06 13:13:32,205 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 7
+2023-04-06 13:13:32,205 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:32,205 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-06 13:13:32,206 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:32,206 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 7
+2023-04-06 13:13:32,900 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-06 13:13:33,040 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 8
+2023-04-06 13:13:33,040 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: poll_exit
+2023-04-06 13:13:33,040 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:33,041 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-06 13:13:33,041 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:33,041 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 8
+2023-04-06 13:13:33,045 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 9
+2023-04-06 13:13:33,046 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:33,046 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-06 13:13:33,046 DEBUG   SenderThread:1980 [sender.py:send():334] send: artifact
+2023-04-06 13:13:33,129 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/config.yaml
+2023-04-06 13:13:33,130 INFO    Thread-13 :1980 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/output.log
+2023-04-06 13:13:33,901 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-06 13:13:34,243 INFO    SenderThread:1980 [sender.py:send_artifact():1415] sent artifact job-https___github.com_qcqced123_FeedBackPrize_3.git_train.py - {'id': 'QXJ0aWZhY3Q6NDE1MDA1NzM4', 'digest': '7a3cf662988f5350340dc4530401e78a', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_qcqced123_FeedBackPrize_3.git_train.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYwNzYzNDgy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDE1MDA1NzM4', 'versionIndex': 1}}, 'version': 'v1'}
+2023-04-06 13:13:34,243 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:34,243 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 9
+2023-04-06 13:13:34,243 INFO    SenderThread:1980 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-04-06 13:13:35,135 INFO    SenderThread:1980 [dir_watcher.py:finish():392] scan: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files
+2023-04-06 13:13:35,135 INFO    SenderThread:1980 [dir_watcher.py:finish():406] scan save: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/requirements.txt requirements.txt
+2023-04-06 13:13:35,135 INFO    SenderThread:1980 [dir_watcher.py:finish():406] scan save: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/output.log output.log
+2023-04-06 13:13:35,138 INFO    SenderThread:1980 [dir_watcher.py:finish():406] scan save: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/config.yaml config.yaml
+2023-04-06 13:13:35,139 INFO    SenderThread:1980 [dir_watcher.py:finish():406] scan save: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-summary.json wandb-summary.json
+2023-04-06 13:13:35,145 INFO    SenderThread:1980 [dir_watcher.py:finish():406] scan save: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-metadata.json wandb-metadata.json
+2023-04-06 13:13:35,145 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 10
+2023-04-06 13:13:35,146 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: poll_exit
+2023-04-06 13:13:35,146 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:35,149 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-06 13:13:35,151 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:35,151 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 10
+2023-04-06 13:13:35,151 INFO    SenderThread:1980 [file_pusher.py:finish():160] shutting down file pusher
+2023-04-06 13:13:35,891 INFO    Thread-20 :1980 [upload_job.py:push():143] Uploaded file /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/wandb-summary.json
+2023-04-06 13:13:35,952 INFO    Thread-17 :1980 [upload_job.py:push():143] Uploaded file /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/requirements.txt
+2023-04-06 13:13:35,960 INFO    Thread-18 :1980 [upload_job.py:push():143] Uploaded file /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/output.log
+2023-04-06 13:13:36,173 INFO    Thread-19 :1980 [upload_job.py:push():143] Uploaded file /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/files/config.yaml
+2023-04-06 13:13:36,376 INFO    Thread-12 :1980 [sender.py:transition_state():585] send defer: 11
+2023-04-06 13:13:36,377 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:36,378 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-06 13:13:36,378 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:36,378 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 11
+2023-04-06 13:13:36,378 INFO    SenderThread:1980 [file_pusher.py:join():165] waiting for file pusher
+2023-04-06 13:13:36,379 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 12
+2023-04-06 13:13:36,379 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:36,379 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-06 13:13:36,379 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:36,379 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 12
+2023-04-06 13:13:36,605 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 13
+2023-04-06 13:13:36,605 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:36,605 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-06 13:13:36,605 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:36,605 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 13
+2023-04-06 13:13:36,605 INFO    SenderThread:1980 [sender.py:transition_state():585] send defer: 14
+2023-04-06 13:13:36,606 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: defer
+2023-04-06 13:13:36,606 INFO    HandlerThread:1980 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-06 13:13:36,606 DEBUG   SenderThread:1980 [sender.py:send():334] send: final
+2023-04-06 13:13:36,606 DEBUG   SenderThread:1980 [sender.py:send():334] send: footer
+2023-04-06 13:13:36,606 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: defer
+2023-04-06 13:13:36,606 INFO    SenderThread:1980 [sender.py:send_request_defer():581] handle sender defer: 14
+2023-04-06 13:13:36,606 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-06 13:13:36,607 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: server_info
+2023-04-06 13:13:36,607 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-06 13:13:36,607 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-06 13:13:36,607 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: poll_exit
+2023-04-06 13:13:36,607 DEBUG   SenderThread:1980 [sender.py:send_request():361] send_request: server_info
+2023-04-06 13:13:36,845 INFO    MainThread:1980 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2023-04-06 13:13:36,845 INFO    MainThread:1980 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2023-04-06 13:13:36,845 INFO    MainThread:1980 [wandb_run.py:_footer_sync_info():3383] logging synced files
+2023-04-06 13:13:36,846 DEBUG   HandlerThread:1980 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-06 13:13:36,847 INFO    HandlerThread:1980 [handler.py:finish():841] shutting down handler
+2023-04-06 13:13:37,612 INFO    WriterThread:1980 [datastore.py:close():299] close: /Users/qcqced/Desktop/GitHub/FeedBackPrize_3/wandb/run-20230406_131327-wbbi1ec9/run-wbbi1ec9.wandb
+2023-04-06 13:13:37,842 INFO    SenderThread:1980 [sender.py:finish():1491] shutting down sender
+2023-04-06 13:13:37,842 INFO    SenderThread:1980 [file_pusher.py:finish():160] shutting down file pusher
+2023-04-06 13:13:37,842 INFO    SenderThread:1980 [file_pusher.py:join():165] waiting for file pusher

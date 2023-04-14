@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 39, in <module>
+    main('fbp3_config.json', CFG)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/train.py", line 20, in main
+    train_loop(cfg)
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/train_loop.py", line 31, in train_loop
+    train_input = FBPTrainer(cfg, g)  # init object
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/trainer/trainer.py", line 21, in __init__
+    self.df = load_data('../data/Base_Train/train_df.csv')
+  File "/Users/qcqced/Desktop/GitHub/FeedBackPrize_3/dataset_class/text_preprocessing.py", line 44, in load_data
+    df = pd.read_csv(data_path)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/Users/qcqced/Desktop/SAMSUNG/venv/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../data/Base_Train/train_df.csv'
