@@ -36,11 +36,11 @@
     },
     "loss_options": {
         "loss_fn": "BinaryCrossEntropyLoss",
-        "val_loss_fn": "pearson_score",
-        "reduction": "mean"
+        "val_loss_fn": "BinaryCrossEntropyLoss",
+        "reduction": "none"
     },
     "metrics_options": {
-        "metrics": ["WeightMCRMSELoss", "f_beta", "recall"]
+        "metrics": "PearsonScore"
     },
     "optimizer_options": {
         "optimizer": "AdamW",
@@ -61,7 +61,7 @@
     "swa_options": {
         "swa": true,
         "swa_lr": 5e-6,
-        "anneal_epochs": 1,
+        "anneal_epochs": 2,
         "anneal_strategy": "cos"
     },
     "model_utils": {
