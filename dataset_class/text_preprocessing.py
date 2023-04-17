@@ -1,7 +1,8 @@
 import re, gc
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, StratifiedGroupKFold
+from sklearn.feature_extraction.text import CountVectorizer
 from iterstrat.ml_stratifiers import MultilabelStratifiedKFold
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer, PorterStemmer
@@ -18,6 +19,19 @@ def kfold(df: pd.DataFrame, cfg) -> pd.DataFrame:
     df['fold'] = -1
     for num, (tx, vx) in enumerate(fold.split(df)):
         df.loc[vx, "fold"] = int(num)
+    return df
+
+
+def stratified_groupkfold(df: pd.DataFrame, cfg) -> pd.DataFrame:
+    fold = StratifiedGroupKFold(
+        n_splits=cfg.n_folds,
+        shuffle=True,
+        random_state=cfg.seed
+    )
+    df["score_class"] = df["score"].map({0.00: 0, 0.25: 1, 0.50: 2, 0.75: 3, 1.00: 4})
+    df['fold'] = -1
+    for num, (tx, vx) in enumerate(fold.split(df, df["score_class"], df["anchor"])):
+        df.loc[vx, "fold"] = num
     return df
 
 
@@ -186,3 +200,43 @@ def normalize_words(words: np.ndarray, unique=True) -> list:
     return words
 
 
+def filter_title(title: str) -> str:
+    include_words= 0
+    titles = normalize_words(title, unique=False)
+    return ','.join([t for t in titles if t in include_words])
+
+
+def upppm_preprocess(data_path, cfg) -> list:
+    train_df = stratified_groupkfold(load_data(data_path), cfg)
+    cpc_codes = pd.read_csv("./dataset/titles.csv", engine='python')
+
+    norm_titles = normalize_words(cpc_codes['title'].to_numpy(), unique=False)  # 여기는 big query dataset을 정규화
+    anchor_targets = train_df['target'].unique().tolist() + train_df[
+        'anchor'].unique().tolist()  # original train dataset
+    norm_anchor_targets = normalize_words(anchor_targets)  # Original Train Dataset 정규화
+    include_words = set(norm_titles) & norm_anchor_targets  # Anchor & Target 공통되는 단어
+    tmp_cpc_codes = cpc_codes.copy()
+    tmp_cpc_codes = tmp_cpc_codes[cpc_codes['code'].str.len() >= 4]
+
+    tmp_cpc_codes['section_class'] = tmp_cpc_codes['code'].apply(lambda x: x[:3])
+    title_group_df = tmp_cpc_codes.groupby('section_class', as_index=False)[['title']].agg(list)
+    title_group_df = title_group_df[title_group_df['section_class'].str.len() == 3]
+    title_group_df['title'] = title_group_df['title'].apply(lambda lst: ' '.join(lst))
+    title_group_df['norm_title'] = title_group_df['title'].agg(filter_title)
+    vectorizer = CountVectorizer()
+    c_vect = vectorizer.fit_transform(title_group_df['norm_title'])
+    r = np.argsort(c_vect.toarray(), axis=1)[:, ::-1][::, :400]
+    vect_words = vectorizer.get_feature_names_out()
+    t_words = np.vectorize(lambda v: vect_words[v])(r)
+    norm_title = title_group_df['norm_title'].str.split(',').to_numpy().tolist()
+    res = []
+    for (n, t) in zip(norm_title, t_words):
+        res.append(','.join(set(n) & set(t)))
+    title_group_df['norm_title'] = res
+    title_group_df['section'] = title_group_df.section_class.str[0:1]
+    title_group_df['section_title'] = title_group_df['section'].map(
+        cpc_codes.set_index('code')['title']).str.lower() + ';' + title_group_df['section_class'].map(
+        cpc_codes.set_index('code')['title']).str.lower()
+    title_group_df['context_text'] = title_group_df['section_title'] + ' [SEP] ' + title_group_df['norm_title']
+    cpc_texts = dict(title_group_df[['section_class', 'context_text']].to_numpy().tolist())
+    return cpc_texts

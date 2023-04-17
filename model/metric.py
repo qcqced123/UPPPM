@@ -7,7 +7,6 @@ from numpy import ndarray
 def accuracy(output, target) -> float:
     with torch.no_grad():
         pred = torch.argmax(output, dim=1)
-        pred = torch.argmax(output, dim=1)
         assert pred.shape[0] == len(target)
         correct = 0
         correct += torch.sum(pred == target).item()

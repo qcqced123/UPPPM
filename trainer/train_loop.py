@@ -70,7 +70,7 @@ def train_loop(cfg: any) -> None:
                 break
             del train_loss, valid_loss, grad_norm, lr
             gc.collect(), torch.cuda.empty_cache()
-            
+
         if not early_stopping.early_stop:
             update_bn(loader_train, swa_model)
             swa_loss = train_input.swa_fn(loader_valid, swa_model, val_criterion)

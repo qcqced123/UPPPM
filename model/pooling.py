@@ -6,26 +6,36 @@ import torch.nn.functional as F
 
 # WeightedLayerPooling: Use Intermediate Layer's Embedding
 class WeightedLayerPooling(nn.Module):
+    """
+    For Weighted Layer Pooling Class
+    In Original Paper, they use [CLS] token for classification task.
+    But in common sense, Mean Pooling more good performance than CLS token Pooling
+    So, we append Last part of this Pooling Method, Using CLS Token then Mean Pooling Embedding
+    Args:
+        auto_cfg: AutoConfig from model class member variable
+        layer_start: start layer for pooling, default 4
+        layer_weights: layer weights for pooling, default None
+    """
     def __init__(self, auto_cfg, layer_start: int = 4, layer_weights=None):
         super(WeightedLayerPooling, self).__init__()
         self.layer_start = layer_start
         self.num_hidden_layers = auto_cfg.num_hidden_layers
         self.layer_weights = layer_weights if layer_weights is not None \
             else nn.Parameter(
-                torch.tensor([1] * (self.num_hidden_layers+1 - layer_start), dtype=torch.float)
+                torch.tensor([1] * (self.num_hidden_layers + 1 - layer_start), dtype=torch.float)
             )
 
-    def forward(self, features) -> Tensor:
-        ft_all_layers = features['all_layer_embeddings']
-
-        all_layer_embedding = torch.stack(ft_all_layers)
+    def forward(self, all_hidden_states, attention_mask) -> Tensor:
+        all_layer_embedding = torch.stack(list(all_hidden_states), dim=0)
         all_layer_embedding = all_layer_embedding[self.layer_start:, :, :, :]
-
         weight_factor = self.layer_weights.unsqueeze(-1).unsqueeze(-1).unsqueeze(-1).expand(all_layer_embedding.size())
         weighted_average = (weight_factor*all_layer_embedding).sum(dim=0) / self.layer_weights.sum()
-
-        features.update({'token_embeddings': weighted_average})
-        return features
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(weighted_average.size()).float()
+        sum_embeddings = torch.sum(weighted_average * input_mask_expanded, 1)
+        sum_mask = input_mask_expanded.sum(1)
+        sum_mask = torch.clamp(sum_mask, min=1e-9)  # if lower than thres, replace value to threshold (parameter min)
+        weighted_mean_embeddings = sum_embeddings / sum_mask
+        return weighted_mean_embeddings
 
 
 # Attention pooling
@@ -56,9 +66,12 @@ class GEMPooling(nn.Module):
     """
     Generalized Mean Pooling for Natural Language Processing
     This class version of GEMPooling for NLP, Transfer from Computer Vision Task Code
+
     Mean Pooling <= GEMPooling <= Max Pooling
     Because of doing exponent to each token embeddings, GEMPooling is like as weight to more activation token
 
+    In original paper, they use p=3, but in this class, we use p=4 because torch doesn't support pow calculation
+    for negative value tensor, only for non-negative value in odd number exponent
     [Reference]
     https://paperswithcode.com/method/generalized-mean-pooling
     """
@@ -66,7 +79,7 @@ class GEMPooling(nn.Module):
         super(GEMPooling, self).__init__()
 
     @staticmethod
-    def forward(self, last_hidden_state, attention_mask, p: int = 3) -> Tensor:
+    def forward(last_hidden_state, attention_mask, p: int = 4) -> Tensor:
         """
         1) Expand Attention Mask from [batch_size, max_len] to [batch_size, max_len, hidden_size]
         2) Sum Embeddings along max_len axis so now we have [batch_size, hidden_size]
@@ -79,7 +92,8 @@ class GEMPooling(nn.Module):
         )
         sum_mask = input_mask_expanded.sum(1)
         sum_mask = torch.clamp(sum_mask, min=1e-9)
-        gem_embeddings = torch.pow(sum_embeddings / sum_mask, 1/p)
+        tmp_embeddings = sum_embeddings / sum_mask
+        gem_embeddings = torch.pow(tmp_embeddings, 1/p)
         return gem_embeddings
 
 

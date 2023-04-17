@@ -58,3 +58,16 @@ def reinit_topk(model, num_layers):
     if num_layers > 0:
         model.encoder.layer[-num_layers:].apply(model._init_weights)
 
+
+# classification task
+def num_classes(loss_name: str) -> int:
+    """
+    Return Num Classes for each Training Objectives (loss function)
+    1) CE
+    2) BCE, Pearson
+    """
+    if loss_name == "CrossEntropyLoss":
+        num_class = 5
+    else:
+        num_class = 1
+    return num_class
