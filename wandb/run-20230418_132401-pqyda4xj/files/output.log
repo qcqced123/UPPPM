@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'score'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 50, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 31, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 34, in train_loop
+    train_input = getattr(trainer, cfg.name)(cfg, g)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 20, in __init__
+    self.df = stratified_groupkfold(
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/dataset_class/text_preprocessing.py", line 32, in stratified_groupkfold
+    df["score_class"] = df["score"].map({0.00: 0, 0.25: 1, 0.50: 2, 0.75: 3, 1.00: 4})
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'score'

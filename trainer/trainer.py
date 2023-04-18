@@ -17,10 +17,7 @@ class UPPPMTrainer:
         self.cfg = cfg
         self.model_name = self.cfg.model.split('/')[1]
         self.generator = generator
-        self.df = stratified_groupkfold(
-            load_data('./dataset_class/data_folder/token_classification/UPPPM_Token_train_df.csv'),
-            self.cfg
-        )
+        self.df = load_data('./dataset_class/data_folder/token_classification/Fold5_UPPPM_train_df.csv')
         self.tokenizer = self.cfg.tokenizer
         if self.cfg.gradient_checkpoint:
             self.save_parameter = f'(best_score){str(self.model_name)}_state_dict.pth'

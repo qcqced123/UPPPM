@@ -46,7 +46,8 @@ class UPPPMDataset(Dataset):
 
         # Data Augment for train stage
         if not self.is_valid:
-            indices = list(range(len(scores)))
+            print(scores, type(scores), scores.shape)
+            indices = list(range(scores.size))
             random.shuffle(indices)
             scores = scores[indices]
             targets = targets[indices]
