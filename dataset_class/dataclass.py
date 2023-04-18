@@ -1,3 +1,4 @@
+import ast
 import random
 import torch
 import numpy as np
@@ -7,6 +8,7 @@ from dataset_class.text_preprocessing import add_special_token
 
 
 class UPPPMDataset(Dataset):
+    """ For Token Classification Task class """
     def __init__(self, cfg, df, is_valid=False):
         super().__init__()
         self.anchor_list = df.anchor.to_numpy()
@@ -40,14 +42,13 @@ class UPPPMDataset(Dataset):
             - shuffle target values
         """
         add_special_token(self.cfg)
-        scores = np.array(self.score_list[idx])  # len(scores) == target count
+        scores = np.array(ast.literal_eval(self.score_list[idx]))  # len(scores) == target count
         target_mask = np.zeros(self.cfg.max_len)
-        targets = np.array(self.target_list[idx])
+        targets = np.array(ast.literal_eval(self.target_list[idx]))
 
-        # Data Augment for train stage
+        # Data Augment for train stage: shuffle target value's position index
         if not self.is_valid:
-            print(scores, type(scores), scores.shape)
-            indices = list(range(scores.size))
+            indices = list(range(len(scores)))
             random.shuffle(indices)
             scores = scores[indices]
             targets = targets[indices]
