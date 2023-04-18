@@ -1,0 +1,105 @@
+{
+    "os": "Linux-5.19.0-38-generic-x86_64-with-glibc2.35",
+    "python": "3.9.13",
+    "heartbeatAt": "2023-04-17T13:17:52.794246",
+    "startedAt": "2023-04-17T13:17:51.998212",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/qcqced/\ubc14\ud0d5\ud654\uba74/ML_Test/UPPPM/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/qcqced123/UPPPM.git",
+        "commit": "349140cb358d04c3041d36541ace87665cef895f"
+    },
+    "email": "97833081+qcqced123@users.noreply.github.com",
+    "root": "/home/qcqced/\ubc14\ud0d5\ud654\uba74/ML_Test/UPPPM",
+    "host": "qcqced-B550M-H",
+    "username": "qcqced",
+    "executable": "/home/qcqced/anaconda3/bin/python",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3.1901666666666664,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3.765,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.58,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4.248,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4.64,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.709,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.829,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2.2,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 4.393,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.711,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3.696,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "total": 107.66527938842773,
+        "used": 69.84685516357422
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 23.37734603881836
+    }
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 50, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 31, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 37, in train_loop
+    lr_scheduler, swa_scheduler, awp = train_input.model_setting(len(train))
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 59, in model_setting
+    model = getattr(model_arch, self.cfg.model_arch)(self.cfg)
+TypeError: __init__() missing 1 required positional argument: 'n_vocabs'

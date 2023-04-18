@@ -206,7 +206,18 @@ def filter_title(title: str) -> str:
     return ','.join([t for t in titles if t in include_words])
 
 
-def upppm_preprocess(data_path, cfg) -> list:
+def add_special_token(cfg) -> None:
+    """ Add [TAR] Token to pretrained tokenizer """
+    tar_token = '[TAR]'
+    special_tokens_dict = {'additional_special_tokens': [f'{tar_token}']}
+    cfg.tokenizer.add_special_tokens(special_tokens_dict)
+    tar_token_id = cfg.tokenizer(f'{tar_token}', add_special_tokens=False)['input_ids'][0]
+    setattr(cfg.tokenizer, 'tar_token', f'{tar_token}')
+    setattr(cfg.tokenizer, 'tar_token_id', tar_token_id)
+    cfg.tokenizer.save_pretrained(f'{cfg.checkpoint_dir}/tokenizer/')
+
+
+def upppm_preprocess(data_path, cfg) -> dict:
     train_df = stratified_groupkfold(load_data(data_path), cfg)
     cpc_codes = pd.read_csv("./dataset/titles.csv", engine='python')
 

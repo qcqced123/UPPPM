@@ -11,8 +11,8 @@ class TokenModel(nn.Module):
     def __init__(self, cfg, n_vocabs: int):
         super().__init__()
         self.cfg = cfg
-        self.auto_cfg = AutoConfig.from_pretrained(cfg.model_name, output_hidden_states=True)
-        self.model = AutoModel.from_pretrained(cfg.model_name, config=self.auto_cfg)
+        self.auto_cfg = AutoConfig.from_pretrained(cfg.model, output_hidden_states=True)
+        self.model = AutoModel.from_pretrained(cfg.model, config=self.auto_cfg)
         self.model.resize_token_embeddings(n_vocabs)
         self.fc = nn.Linear(self.auto_cfg.hidden_size, num_classes(self.cfg.loss_fn))
         # self.model.load_state_dict(torch.load(cfg.checkpoint_dir + cfg.state_dict), strict=False)

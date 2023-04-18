@@ -17,7 +17,7 @@ class UPPPMTrainer:
         self.cfg = cfg
         self.model_name = self.cfg.model.split('/')[1]
         self.generator = generator
-        self.df = load_data('./dataset_class/data_folder/token_classification/UPPPM_token_train_df.csv')
+        self.df = load_data('./dataset_class/data_folder/token_classification/UPPPM_Token_train_df.csv')
         self.tokenizer = self.cfg.tokenizer
         if self.cfg.gradient_checkpoint:
             self.save_parameter = f'(best_score){str(self.model_name)}_state_dict.pth'
@@ -56,7 +56,7 @@ class UPPPMTrainer:
         return loader_train, loader_valid, train, valid_labels
 
     def model_setting(self, len_train: int):
-        model = getattr(model_arch, self.cfg.model_arch)(self.cfg)
+        model = getattr(model_arch, self.cfg.model_arch)(self.cfg, len(self.tokenizer))
         if self.cfg.resume:
             model.load_state_dict(torch.load(self.cfg.checkpoint_dir + self.cfg.state_dict))
         model.to(self.cfg.device)

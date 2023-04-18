@@ -3,6 +3,7 @@ import torch
 import numpy as np
 from torch.utils.data import Dataset
 from torch import Tensor
+from dataset_class.text_preprocessing import add_special_token
 
 
 class UPPPMDataset(Dataset):
@@ -15,17 +16,6 @@ class UPPPMDataset(Dataset):
         self.id_list = df.ids.to_numpy()
         self.cfg = cfg
         self.is_valid = is_valid
-
-    def add_special_token(self):
-        """ Add [TAR] Token to pretrained tokenizer """
-        tar_token = '[TAR]'
-        special_tokens_dict = {'additional_special_tokens': [f'{tar_token}']}
-        self.cfg.tokenizer.add_special_tokens(special_tokens_dict)
-        tar_token_id = self.cfg.tokenizer(f'{tar_token}', add_special_tokens=False)['input_ids'][0]
-        # logger.info(f'tar_token_id: {tar_token_id}')
-        setattr(self.cfg.tokenizer, 'tar_token', f'{tar_token}')
-        setattr(self.cfg.tokenizer, 'tar_token_id', tar_token_id)
-        self.cfg.tokenizer.save_pretrained(f'{self.cfg.output_dir}tokenizer/')
 
     def tokenizing(self, text: str) -> dict:
         inputs = self.cfg.tokenizer.encode_plus(
@@ -49,6 +39,7 @@ class UPPPMDataset(Dataset):
         2) apply data augment
             - shuffle target values
         """
+        add_special_token(self.cfg)
         scores = np.array(self.score_list[idx])  # len(scores) == target count
         target_mask = np.zeros(self.cfg.max_len)
         targets = np.array(self.target_list[idx])

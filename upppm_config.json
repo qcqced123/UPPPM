@@ -5,7 +5,7 @@
         "checkpoint_dir": "./saved/model/token_classification/",
         "resume": false,
         "state_dict": "",
-        "name": "FBPTrainer",
+        "name": "UPPPMTrainer",
         "loop": "train_loop",
         "dataset": "UPPPMDataset",
         "model_arch": "TokenModel",

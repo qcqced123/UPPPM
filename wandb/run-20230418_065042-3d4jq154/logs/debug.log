@@ -1,0 +1,27 @@
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Configure stats pid to 5217
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Loading settings from /home/qcqced/.config/wandb/settings
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Loading settings from /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/settings
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-04-18 06:50:42,351 INFO    MainThread:5217 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/qcqced/바탕화면/ML_Test/UPPPM/train.py'}
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:_log_setup():506] Logging user logs to /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_065042-3d4jq154/logs/debug.log
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:_log_setup():507] Logging internal logs to /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_065042-3d4jq154/logs/debug-internal.log
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:init():546] calling init triggers
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:init():552] wandb.init called with sweep_config: {}
+config: {'amp_scaler': True, 'anneal_epochs': 2, 'anneal_strategy': 'cos', 'awp': False, 'awp_eps': 0.01, 'awp_lr': 0.0001, 'batch_scheduler': True, 'batch_size': 32, 'betas': [0.9, 0.999], 'cfg_name': 'CFG', 'checkpoint_dir': './saved/model/token_classification/', 'clipping_grad': True, 'competition': 'FBP3', 'dataset': 'UPPPMDataset', 'device': device(type='cuda', index=0), 'epochs': 20, 'freeze': False, 'gpu_id': 0, 'gradient_checkpoint': True, 'layerwise_adam_epsilon': 1e-06, 'layerwise_lr': 5e-06, 'layerwise_lr_decay': 0.9, 'layerwise_use_bertadam': False, 'layerwise_weight_decay': 0.01, 'llrd': True, 'loop': 'train_loop', 'loss_fn': 'BinaryCrossEntropyLoss', 'max_grad_norm': 1, 'max_len': 1536, 'metrics': 'PearsonScore', 'model': 'microsoft/deberta-v3-large', 'model_arch': 'TokenModel', 'n_folds': 5, 'n_gpu': 1, 'n_gradient_accumulation_steps': 1, 'name': 'UPPPMTrainer', 'nth_awp_start_epoch': 0, 'num_cycles': 2, 'num_freeze': 4, 'num_reinit': 2, 'num_workers': 0, 'optimizer': 'AdamW', 'optuna': False, 'pooling': 'GEMPooling', 'reduction': 'none', 'reinit': True, 'resume': False, 'scheduler': 'cosine_annealing', 'seed': 42, 'state_dict': '', 'stop_mode': 'max', 'swa': True, 'swa_lr': 5e-06, 'swa_start': 135, 'test': False, 'tokenizer': PreTrainedTokenizerFast(name_or_path='microsoft/deberta-v3-large', vocab_size=128000, model_max_len=1000000000000000019884624838656, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'bos_token': '[CLS]', 'eos_token': '[SEP]', 'unk_token': '[UNK]', 'sep_token': '[SEP]', 'pad_token': '[PAD]', 'cls_token': '[CLS]', 'mask_token': '[MASK]'}), 'train': True, 'val_loss_fn': 'BinaryCrossEntropyLoss', 'wandb': True, 'warmup_ratio': 0.1}
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:init():602] starting backend
+2023-04-18 06:50:42,352 INFO    MainThread:5217 [wandb_init.py:init():606] setting up manager
+2023-04-18 06:50:42,357 INFO    MainThread:5217 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-18 06:50:42,359 INFO    MainThread:5217 [wandb_init.py:init():613] backend started and connected
+2023-04-18 06:50:42,363 INFO    MainThread:5217 [wandb_init.py:init():701] updated telemetry
+2023-04-18 06:50:42,372 INFO    MainThread:5217 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-04-18 06:50:42,960 INFO    MainThread:5217 [wandb_run.py:_on_init():2133] communicating current version
+2023-04-18 06:50:42,988 INFO    MainThread:5217 [wandb_run.py:_on_init():2142] got version response upgrade_message: "wandb version 0.14.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-04-18 06:50:42,988 INFO    MainThread:5217 [wandb_init.py:init():789] starting run threads in backend
+2023-04-18 06:50:46,904 INFO    MainThread:5217 [wandb_run.py:_console_start():2114] atexit reg
+2023-04-18 06:50:46,905 INFO    MainThread:5217 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-04-18 06:50:46,905 INFO    MainThread:5217 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-04-18 06:50:46,905 INFO    MainThread:5217 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-04-18 06:50:46,905 INFO    MainThread:5217 [wandb_init.py:init():831] run started, returning control to user process
+2023-04-18 06:50:59,507 WARNING MsgRouterThr:5217 [router.py:message_loop():77] message_loop has been closed
