@@ -1,0 +1,480 @@
+2023-04-18 22:53:41,150 INFO    StreamThr :18014 [internal.py:wandb_internal():87] W&B internal server running at pid: 18014, started at: 2023-04-18 22:53:41.149702
+2023-04-18 22:53:41,150 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status
+2023-04-18 22:53:41,154 INFO    WriterThread:18014 [datastore.py:open_for_write():85] open: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/run-er1t0ept.wandb
+2023-04-18 22:53:41,154 DEBUG   SenderThread:18014 [sender.py:send():336] send: header
+2023-04-18 22:53:41,173 DEBUG   SenderThread:18014 [sender.py:send():336] send: run
+2023-04-18 22:53:43,547 INFO    SenderThread:18014 [dir_watcher.py:__init__():219] watching files in: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files
+2023-04-18 22:53:43,548 INFO    SenderThread:18014 [sender.py:_start_run_threads():1078] run started: er1t0ept with start time 1681826021.15046
+2023-04-18 22:53:43,548 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: summary_record
+2023-04-18 22:53:43,548 INFO    SenderThread:18014 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 22:53:43,551 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: check_version
+2023-04-18 22:53:43,551 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: check_version
+2023-04-18 22:53:43,621 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: run_start
+2023-04-18 22:53:43,626 DEBUG   HandlerThread:18014 [system_info.py:__init__():31] System info init
+2023-04-18 22:53:43,626 DEBUG   HandlerThread:18014 [system_info.py:__init__():46] System info init done
+2023-04-18 22:53:43,626 INFO    HandlerThread:18014 [system_monitor.py:start():183] Starting system monitor
+2023-04-18 22:53:43,627 INFO    SystemMonitor:18014 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-04-18 22:53:43,627 INFO    HandlerThread:18014 [system_monitor.py:probe():204] Collecting system info
+2023-04-18 22:53:43,627 INFO    SystemMonitor:18014 [interfaces.py:start():187] Started cpu monitoring
+2023-04-18 22:53:43,627 INFO    SystemMonitor:18014 [interfaces.py:start():187] Started disk monitoring
+2023-04-18 22:53:43,628 INFO    SystemMonitor:18014 [interfaces.py:start():187] Started gpu monitoring
+2023-04-18 22:53:43,628 INFO    SystemMonitor:18014 [interfaces.py:start():187] Started memory monitoring
+2023-04-18 22:53:43,628 INFO    SystemMonitor:18014 [interfaces.py:start():187] Started network monitoring
+2023-04-18 22:53:43,636 DEBUG   HandlerThread:18014 [system_info.py:probe():195] Probing system
+2023-04-18 22:53:43,640 DEBUG   HandlerThread:18014 [system_info.py:_probe_git():180] Probing git
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_info.py:_probe_git():188] Probing git done
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_info.py:probe():240] Probing system done
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_monitor.py:probe():213] {'os': 'Linux-5.19.0-38-generic-x86_64-with-glibc2.35', 'python': '3.9.13', 'heartbeatAt': '2023-04-18T13:53:43.636288', 'startedAt': '2023-04-18T13:53:41.130391', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/qcqced/바탕화면/ML_Test/UPPPM/train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/qcqced123/UPPPM.git', 'commit': 'cdb6af4cdec6c3b866f5579c0a77af20515b6c17'}, 'email': '97833081+qcqced123@users.noreply.github.com', 'root': '/home/qcqced/바탕화면/ML_Test/UPPPM', 'host': 'qcqced-B550M-H', 'username': 'qcqced', 'executable': '/home/qcqced/anaconda3/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3.7975000000000008, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4.428, 'min': 2200.0, 'max': 3700.0}, {'current': 3.797, 'min': 2200.0, 'max': 3700.0}, {'current': 3.758, 'min': 2200.0, 'max': 3700.0}, {'current': 4.039, 'min': 2200.0, 'max': 3700.0}, {'current': 3.711, 'min': 2200.0, 'max': 3700.0}, {'current': 3.851, 'min': 2200.0, 'max': 3700.0}, {'current': 3.6, 'min': 2200.0, 'max': 3700.0}, {'current': 3.631, 'min': 2200.0, 'max': 3700.0}, {'current': 3.52, 'min': 2200.0, 'max': 3700.0}, {'current': 3.728, 'min': 2200.0, 'max': 3700.0}, {'current': 3.712, 'min': 2200.0, 'max': 3700.0}, {'current': 4.04, 'min': 2200.0, 'max': 3700.0}], 'disk': {'total': 107.66527938842773, 'used': 78.1011848449707}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 23.37734603881836}}
+2023-04-18 22:53:43,647 INFO    HandlerThread:18014 [system_monitor.py:probe():214] Finished collecting system info
+2023-04-18 22:53:43,647 INFO    HandlerThread:18014 [system_monitor.py:probe():217] Publishing system info
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-18 22:53:43,647 DEBUG   HandlerThread:18014 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-18 22:53:44,549 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-summary.json
+2023-04-18 22:53:44,549 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/requirements.txt
+2023-04-18 22:53:44,549 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/conda-environment.yaml
+2023-04-18 22:53:47,548 DEBUG   HandlerThread:18014 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-18 22:53:47,549 INFO    HandlerThread:18014 [system_monitor.py:probe():219] Finished publishing system info
+2023-04-18 22:53:47,549 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/conda-environment.yaml
+2023-04-18 22:53:47,549 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-metadata.json
+2023-04-18 22:53:47,554 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:53:47,554 DEBUG   SenderThread:18014 [sender.py:send():336] send: files
+2023-04-18 22:53:47,554 INFO    SenderThread:18014 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-04-18 22:53:47,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:53:47,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:53:47,769 DEBUG   SenderThread:18014 [sender.py:send():336] send: telemetry
+2023-04-18 22:53:48,171 INFO    wandb-upload_0:18014 [upload_job.py:push():138] Uploaded file /tmp/tmpfc4wufiqwandb/1vii986c-wandb-metadata.json
+2023-04-18 22:53:50,550 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:53:51,984 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:53:52,551 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:53:54,551 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:53:56,988 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:53:58,552 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:02,302 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:02,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:54:02,559 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:54:04,553 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:07,702 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:08,554 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:13,557 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:14,558 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:14,558 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/config.yaml
+2023-04-18 22:54:17,557 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:54:17,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:54:18,560 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:19,798 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:24,561 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:25,261 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:28,562 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:30,345 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:32,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:54:32,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:54:34,563 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:35,793 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:38,564 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:41,141 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:42,565 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:43,628 DEBUG   SystemMonitor:18014 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-04-18 22:54:43,629 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:54:46,630 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:47,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:54:47,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:54:48,566 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:51,792 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:52,567 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:54:57,009 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:54:58,568 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:02,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:55:02,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:55:02,774 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:55:04,570 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:08,084 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:55:08,571 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:12,572 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:13,629 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:55:13,630 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:55:17,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:55:17,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:55:18,573 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:22,443 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:55:24,574 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:27,633 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:55:28,575 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:32,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 22:55:32,558 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 22:55:34,576 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:55:37,558 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:55:42,559 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:55:47,560 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:55:52,560 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:55:57,561 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:02,561 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:05,942 INFO    SenderThread:18014 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/qcqced/anaconda3/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/home/qcqced/anaconda3/lib/python3.9/ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/qcqced/anaconda3/lib/python3.9/ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 243, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+2023-04-18 22:56:07,562 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:12,562 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:17,563 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:22,563 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:27,564 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:32,565 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:37,565 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:42,566 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:47,566 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:52,567 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:56:57,567 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:02,568 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:07,568 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:12,569 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:17,570 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:22,570 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:27,571 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:32,571 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:37,572 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:42,572 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:43,126 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:57:43,126 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:57:43,126 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:57:43,127 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:57:43,128 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:57:43,635 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:57:44,607 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:57:47,573 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:48,608 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:57:49,088 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:57:52,573 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:57:52,609 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:57:54,920 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:57:56,610 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:57:57,574 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:00,564 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:02,574 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:02,611 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:06,386 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:06,612 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:07,575 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:12,211 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:12,576 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:12,614 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:13,632 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:58:16,614 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:17,576 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:18,036 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:22,577 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:22,616 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:23,862 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:26,616 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:27,577 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:29,505 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:30,617 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:32,578 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:35,331 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:36,618 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:37,578 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:40,619 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:41,158 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:42,579 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:43,632 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:58:46,620 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:46,977 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:47,579 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:50,621 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:52,580 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:52,796 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:58:54,622 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:58:57,581 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:58:58,441 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:00,623 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:02,581 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:04,268 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:04,624 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:07,582 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:10,087 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:10,625 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:12,582 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:13,633 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:59:14,626 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:15,633 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:17,583 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:18,627 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:20,734 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:22,584 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:24,628 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:26,557 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:27,584 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:28,629 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:32,197 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:32,585 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:34,630 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:37,586 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:38,014 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:38,631 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:42,586 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:42,632 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:43,633 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 22:59:43,634 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:47,587 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:48,633 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:48,648 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:52,587 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:52,634 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 22:59:54,465 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 22:59:57,588 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 22:59:58,635 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:00,283 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:02,588 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:02,636 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:05,924 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:07,589 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:08,638 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:11,752 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:12,589 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:12,639 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:13,634 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 23:00:16,639 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:17,575 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:17,590 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:22,590 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:22,641 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:23,397 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:26,642 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:27,591 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:29,216 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:32,592 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:32,643 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:35,189 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:36,644 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:37,592 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:40,452 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:42,593 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:42,645 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:43,634 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 23:00:45,458 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:46,646 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:47,593 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:48,646 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:50,647 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:50,672 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:52,594 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:52,647 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:54,648 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:55,875 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:00:56,648 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:00:57,594 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:00:58,649 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:00,649 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:01,485 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:02,595 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:02,650 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:04,650 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:06,651 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:07,313 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:07,595 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:08,651 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:10,652 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:12,495 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:12,596 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:12,652 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:13,635 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 23:01:14,652 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:16,653 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:17,597 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:17,679 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:18,653 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:20,654 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:22,597 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:22,654 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:22,863 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:24,655 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:24,957 DEBUG   SenderThread:18014 [sender.py:send():336] send: exit
+2023-04-18 23:01:24,957 INFO    SenderThread:18014 [sender.py:send_exit():559] handling exit code: 1
+2023-04-18 23:01:24,957 INFO    SenderThread:18014 [sender.py:send_exit():561] handling runtime: 461
+2023-04-18 23:01:24,957 INFO    SenderThread:18014 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 23:01:24,957 INFO    SenderThread:18014 [sender.py:send_exit():567] send defer
+2023-04-18 23:01:24,957 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,957 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-18 23:01:24,958 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,958 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-04-18 23:01:24,958 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 1
+2023-04-18 23:01:24,958 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,958 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-18 23:01:24,958 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,958 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-04-18 23:01:24,958 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 2
+2023-04-18 23:01:24,958 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,958 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-18 23:01:24,958 INFO    HandlerThread:18014 [system_monitor.py:finish():193] Stopping system monitor
+2023-04-18 23:01:24,958 DEBUG   SystemMonitor:18014 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-04-18 23:01:24,959 DEBUG   SystemMonitor:18014 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-04-18 23:01:24,959 INFO    HandlerThread:18014 [interfaces.py:finish():199] Joined cpu monitor
+2023-04-18 23:01:24,959 INFO    HandlerThread:18014 [interfaces.py:finish():199] Joined disk monitor
+2023-04-18 23:01:24,978 INFO    HandlerThread:18014 [interfaces.py:finish():199] Joined gpu monitor
+2023-04-18 23:01:24,978 INFO    HandlerThread:18014 [interfaces.py:finish():199] Joined memory monitor
+2023-04-18 23:01:24,979 INFO    HandlerThread:18014 [interfaces.py:finish():199] Joined network monitor
+2023-04-18 23:01:24,979 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 3
+2023-04-18 23:01:24,979 DEBUG   SenderThread:18014 [sender.py:send():336] send: stats
+2023-04-18 23:01:24,979 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,979 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-18 23:01:24,979 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 4
+2023-04-18 23:01:24,979 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,979 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-18 23:01:24,979 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-04-18 23:01:24,979 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 5
+2023-04-18 23:01:24,979 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,979 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-18 23:01:24,980 DEBUG   SenderThread:18014 [sender.py:send():336] send: summary
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 23:01:24,980 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 6
+2023-04-18 23:01:24,980 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,980 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-18 23:01:24,980 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 7
+2023-04-18 23:01:24,980 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:01:24,980 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:24,980 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-18 23:01:24,980 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:24,980 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-04-18 23:01:25,655 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-summary.json
+2023-04-18 23:01:25,957 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-18 23:01:26,656 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:28,440 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 8
+2023-04-18 23:01:28,440 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: poll_exit
+2023-04-18 23:01:28,441 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:28,441 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-18 23:01:28,441 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:28,441 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-04-18 23:01:28,460 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 9
+2023-04-18 23:01:28,460 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:28,460 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-18 23:01:28,460 DEBUG   SenderThread:18014 [sender.py:send():336] send: artifact
+2023-04-18 23:01:28,656 INFO    Thread-13 :18014 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:29,654 INFO    SenderThread:18014 [sender.py:send_artifact():1428] sent artifact job-https___github.com_qcqced123_UPPPM.git_train.py - {'id': 'QXJ0aWZhY3Q6NDI3Mzk5NzIx', 'digest': '68ad43f8a1d3d2afcaefe1acabcf17bb', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_qcqced123_UPPPM.git_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_qcqced123_UPPPM.git_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYzMDE0MTMw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDI3Mzk5NzIx', 'versionIndex': 0}}, 'version': 'v0'}
+2023-04-18 23:01:29,654 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:29,654 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-04-18 23:01:29,654 INFO    SenderThread:18014 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-18 23:01:29,657 INFO    SenderThread:18014 [dir_watcher.py:finish():395] scan: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files
+2023-04-18 23:01:29,657 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/conda-environment.yaml conda-environment.yaml
+2023-04-18 23:01:29,657 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-summary.json wandb-summary.json
+2023-04-18 23:01:29,657 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-metadata.json wandb-metadata.json
+2023-04-18 23:01:29,658 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log output.log
+2023-04-18 23:01:29,660 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/requirements.txt requirements.txt
+2023-04-18 23:01:29,660 INFO    SenderThread:18014 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/config.yaml config.yaml
+2023-04-18 23:01:29,660 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 10
+2023-04-18 23:01:29,662 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:29,662 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-18 23:01:29,667 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:29,667 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-04-18 23:01:29,667 INFO    SenderThread:18014 [file_pusher.py:finish():164] shutting down file pusher
+2023-04-18 23:01:30,268 INFO    wandb-upload_4:18014 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/config.yaml
+2023-04-18 23:01:30,352 INFO    wandb-upload_1:18014 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/wandb-summary.json
+2023-04-18 23:01:30,353 INFO    wandb-upload_3:18014 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/requirements.txt
+2023-04-18 23:01:30,420 INFO    wandb-upload_0:18014 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/conda-environment.yaml
+2023-04-18 23:01:30,621 INFO    wandb-upload_2:18014 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/files/output.log
+2023-04-18 23:01:30,821 INFO    Thread-12 :18014 [sender.py:transition_state():587] send defer: 11
+2023-04-18 23:01:30,821 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:30,821 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-18 23:01:30,821 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:30,822 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-04-18 23:01:30,822 INFO    SenderThread:18014 [file_pusher.py:join():169] waiting for file pusher
+2023-04-18 23:01:30,822 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 12
+2023-04-18 23:01:30,822 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:30,822 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-18 23:01:30,822 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:30,822 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-04-18 23:01:30,958 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-18 23:01:31,545 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 13
+2023-04-18 23:01:31,545 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:31,545 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-18 23:01:31,546 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:31,546 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-04-18 23:01:31,546 INFO    SenderThread:18014 [sender.py:transition_state():587] send defer: 14
+2023-04-18 23:01:31,546 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:01:31,546 DEBUG   SenderThread:18014 [sender.py:send():336] send: final
+2023-04-18 23:01:31,546 INFO    HandlerThread:18014 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-18 23:01:31,546 DEBUG   SenderThread:18014 [sender.py:send():336] send: footer
+2023-04-18 23:01:31,546 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:01:31,546 INFO    SenderThread:18014 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-04-18 23:01:31,547 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-18 23:01:31,547 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: poll_exit
+2023-04-18 23:01:31,547 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: server_info
+2023-04-18 23:01:31,547 DEBUG   SenderThread:18014 [sender.py:send_request():363] send_request: server_info
+2023-04-18 23:01:31,549 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-18 23:01:31,550 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-18 23:01:31,784 INFO    MainThread:18014 [wandb_run.py:_footer_history_summary_info():3422] rendering history
+2023-04-18 23:01:31,784 INFO    MainThread:18014 [wandb_run.py:_footer_history_summary_info():3454] rendering summary
+2023-04-18 23:01:31,784 INFO    MainThread:18014 [wandb_run.py:_footer_sync_info():3380] logging synced files
+2023-04-18 23:01:31,785 DEBUG   HandlerThread:18014 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-18 23:01:31,785 INFO    HandlerThread:18014 [handler.py:finish():842] shutting down handler
+2023-04-18 23:01:32,547 INFO    WriterThread:18014 [datastore.py:close():298] close: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_225341-er1t0ept/run-er1t0ept.wandb
+2023-04-18 23:01:32,785 INFO    SenderThread:18014 [sender.py:finish():1504] shutting down sender
+2023-04-18 23:01:32,785 INFO    SenderThread:18014 [file_pusher.py:finish():164] shutting down file pusher
+2023-04-18 23:01:32,785 INFO    SenderThread:18014 [file_pusher.py:join():169] waiting for file pusher

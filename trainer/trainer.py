@@ -1,3 +1,4 @@
+import ast
 import dataset_class.dataclass as dataset_class
 import model.loss as model_loss
 import model.metric as model_metric
@@ -29,7 +30,12 @@ class UPPPMTrainer:
         # Custom Datasets
         train_dataset = getattr(dataset_class, self.cfg.dataset)(self.cfg, train)
         valid_dataset = getattr(dataset_class, self.cfg.dataset)(self.cfg, valid, is_valid=True)
-        valid_labels = valid['scores'].explode().to_numpy()
+        """ need to import pandas """
+        tmp_valid, valid_labels = valid.explode('scores').scores.to_list(), []
+        for val_list in tmp_valid:
+            for score in ast.literal_eval(val_list):
+                valid_labels.append(float(score))
+        valid_labels = np.array(valid_labels)
 
         # DataLoader
         loader_train = DataLoader(
@@ -115,7 +121,9 @@ class UPPPMTrainer:
 
             with torch.cuda.amp.autocast(enabled=self.cfg.amp_scaler):
                 preds = model(inputs)
-                loss = criterion(preds.view(-1, -1), labels.view(-1, -1))
+                loss = criterion(preds.view(-1, 1), labels.view(-1, 1))
+                mask = (labels.view(-1, 1) != -1)
+                loss = torch.masked_select(loss, mask).mean()  # reduction = mean
                 losses.update(loss, batch_size)
 
             if self.cfg.n_gradient_accumulation_steps > 1:
@@ -159,7 +167,7 @@ class UPPPMTrainer:
                 labels = labels.to(self.cfg.device)
                 batch_size = labels.size(0)
                 preds = model(inputs)
-                valid_loss = val_criterion(preds(-1, -1), labels.view(-1, -1))
+                valid_loss = val_criterion(preds.view(-1, 1), labels.view(-1, 1))
                 mask = (labels.view(-1, 1) != -1)
                 valid_loss = torch.masked_select(valid_loss, mask).mean()
                 valid_losses.update(valid_loss, batch_size)
@@ -198,7 +206,7 @@ class UPPPMTrainer:
                 swa_labels = swa_labels.to(self.cfg.device)
                 batch_size = swa_labels.size(0)
                 swa_preds = swa_model(swa_inputs)
-                swa_valid_loss = val_criterion(swa_preds.view(-1, -1), swa_labels.view(-1, -1))
+                swa_valid_loss = val_criterion(swa_preds.view(-1, 1), swa_labels.view(-1, 1))
                 mask = (swa_labels.view(-1, 1) != -1)
                 swa_valid_loss = torch.masked_select(swa_valid_loss, mask)
                 swa_valid_loss = swa_valid_loss.mean()

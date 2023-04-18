@@ -23,16 +23,16 @@
     },
     "data_settings": {
         "n_folds": 5,
-        "max_len": 1536,
-        "epochs": 20,
-        "batch_size": 32
+        "max_len": 400,
+        "epochs": 30,
+        "batch_size": 1
     },
     "gradient_settings": {
-        "amp_scaler": true,
+        "amp_scaler": false,
         "gradient_checkpoint": true,
         "clipping_grad": true,
         "n_gradient_accumulation_steps": 1,
-        "max_grad_norm": 1
+        "max_grad_norm": 1000
     },
     "loss_options": {
         "loss_fn": "BinaryCrossEntropyLoss",
@@ -45,7 +45,7 @@
     "optimizer_options": {
         "optimizer": "AdamW",
         "llrd": true,
-        "layerwise_lr": 5e-6,
+        "layerwise_lr": 1e-5,
         "layerwise_lr_decay": 0.9,
         "layerwise_weight_decay": 1e-2,
         "layerwise_adam_epsilon": 1e-6,

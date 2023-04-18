@@ -1,0 +1,178 @@
+2023-04-18 23:06:38,608 INFO    StreamThr :18845 [internal.py:wandb_internal():87] W&B internal server running at pid: 18845, started at: 2023-04-18 23:06:38.607741
+2023-04-18 23:06:38,608 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: status
+2023-04-18 23:06:38,612 INFO    WriterThread:18845 [datastore.py:open_for_write():85] open: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/run-snre9yid.wandb
+2023-04-18 23:06:38,612 DEBUG   SenderThread:18845 [sender.py:send():336] send: header
+2023-04-18 23:06:38,629 DEBUG   SenderThread:18845 [sender.py:send():336] send: run
+2023-04-18 23:06:42,661 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: check_version
+2023-04-18 23:06:42,673 INFO    SenderThread:18845 [dir_watcher.py:__init__():219] watching files in: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files
+2023-04-18 23:06:42,673 INFO    SenderThread:18845 [sender.py:_start_run_threads():1078] run started: snre9yid with start time 1681826798.608247
+2023-04-18 23:06:42,673 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: summary_record
+2023-04-18 23:06:42,674 INFO    SenderThread:18845 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 23:06:42,674 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: check_version
+2023-04-18 23:06:42,721 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: run_start
+2023-04-18 23:06:42,727 DEBUG   HandlerThread:18845 [system_info.py:__init__():31] System info init
+2023-04-18 23:06:42,727 DEBUG   HandlerThread:18845 [system_info.py:__init__():46] System info init done
+2023-04-18 23:06:42,727 INFO    HandlerThread:18845 [system_monitor.py:start():183] Starting system monitor
+2023-04-18 23:06:42,727 INFO    SystemMonitor:18845 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-04-18 23:06:42,727 INFO    HandlerThread:18845 [system_monitor.py:probe():204] Collecting system info
+2023-04-18 23:06:42,728 INFO    SystemMonitor:18845 [interfaces.py:start():187] Started cpu monitoring
+2023-04-18 23:06:42,728 INFO    SystemMonitor:18845 [interfaces.py:start():187] Started disk monitoring
+2023-04-18 23:06:42,728 INFO    SystemMonitor:18845 [interfaces.py:start():187] Started gpu monitoring
+2023-04-18 23:06:42,729 INFO    SystemMonitor:18845 [interfaces.py:start():187] Started memory monitoring
+2023-04-18 23:06:42,730 INFO    SystemMonitor:18845 [interfaces.py:start():187] Started network monitoring
+2023-04-18 23:06:42,737 DEBUG   HandlerThread:18845 [system_info.py:probe():195] Probing system
+2023-04-18 23:06:42,743 DEBUG   HandlerThread:18845 [system_info.py:_probe_git():180] Probing git
+2023-04-18 23:06:42,754 DEBUG   HandlerThread:18845 [system_info.py:_probe_git():188] Probing git done
+2023-04-18 23:06:42,754 DEBUG   HandlerThread:18845 [system_info.py:probe():240] Probing system done
+2023-04-18 23:06:42,754 DEBUG   HandlerThread:18845 [system_monitor.py:probe():213] {'os': 'Linux-5.19.0-38-generic-x86_64-with-glibc2.35', 'python': '3.9.13', 'heartbeatAt': '2023-04-18T14:06:42.737966', 'startedAt': '2023-04-18T14:06:38.600940', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/qcqced/바탕화면/ML_Test/UPPPM/train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/qcqced123/UPPPM.git', 'commit': 'cdb6af4cdec6c3b866f5579c0a77af20515b6c17'}, 'email': '97833081+qcqced123@users.noreply.github.com', 'root': '/home/qcqced/바탕화면/ML_Test/UPPPM', 'host': 'qcqced-B550M-H', 'username': 'qcqced', 'executable': '/home/qcqced/anaconda3/bin/python', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 4.515083333333333, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4.543, 'min': 2200.0, 'max': 3700.0}, {'current': 4.548, 'min': 2200.0, 'max': 3700.0}, {'current': 4.543, 'min': 2200.0, 'max': 3700.0}, {'current': 4.548, 'min': 2200.0, 'max': 3700.0}, {'current': 4.548, 'min': 2200.0, 'max': 3700.0}, {'current': 4.56, 'min': 2200.0, 'max': 3700.0}, {'current': 4.581, 'min': 2200.0, 'max': 3700.0}, {'current': 4.548, 'min': 2200.0, 'max': 3700.0}, {'current': 4.548, 'min': 2200.0, 'max': 3700.0}, {'current': 4.501, 'min': 2200.0, 'max': 3700.0}, {'current': 4.525, 'min': 2200.0, 'max': 3700.0}, {'current': 4.55, 'min': 2200.0, 'max': 3700.0}], 'disk': {'total': 107.66527938842773, 'used': 78.11828994750977}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 23.37734603881836}}
+2023-04-18 23:06:42,754 INFO    HandlerThread:18845 [system_monitor.py:probe():214] Finished collecting system info
+2023-04-18 23:06:42,754 INFO    HandlerThread:18845 [system_monitor.py:probe():217] Publishing system info
+2023-04-18 23:06:42,754 DEBUG   HandlerThread:18845 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-18 23:06:42,755 DEBUG   HandlerThread:18845 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-18 23:06:42,755 DEBUG   HandlerThread:18845 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-18 23:06:43,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-summary.json
+2023-04-18 23:06:43,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/conda-environment.yaml
+2023-04-18 23:06:43,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/requirements.txt
+2023-04-18 23:06:46,584 DEBUG   HandlerThread:18845 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-18 23:06:46,584 INFO    HandlerThread:18845 [system_monitor.py:probe():219] Finished publishing system info
+2023-04-18 23:06:46,589 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:06:46,589 DEBUG   SenderThread:18845 [sender.py:send():336] send: files
+2023-04-18 23:06:46,589 INFO    SenderThread:18845 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-04-18 23:06:46,592 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-18 23:06:46,592 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: stop_status
+2023-04-18 23:06:46,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/conda-environment.yaml
+2023-04-18 23:06:46,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-metadata.json
+2023-04-18 23:06:46,853 DEBUG   SenderThread:18845 [sender.py:send():336] send: telemetry
+2023-04-18 23:06:46,854 DEBUG   SenderThread:18845 [sender.py:send():336] send: exit
+2023-04-18 23:06:46,854 INFO    SenderThread:18845 [sender.py:send_exit():559] handling exit code: 1
+2023-04-18 23:06:46,854 INFO    SenderThread:18845 [sender.py:send_exit():561] handling runtime: 3
+2023-04-18 23:06:46,855 INFO    SenderThread:18845 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 23:06:46,855 INFO    SenderThread:18845 [sender.py:send_exit():567] send defer
+2023-04-18 23:06:46,855 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,855 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-18 23:06:46,855 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,855 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-04-18 23:06:46,855 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 1
+2023-04-18 23:06:46,855 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,855 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-18 23:06:46,856 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,856 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-04-18 23:06:46,856 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 2
+2023-04-18 23:06:46,856 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,856 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-18 23:06:46,856 INFO    HandlerThread:18845 [system_monitor.py:finish():193] Stopping system monitor
+2023-04-18 23:06:46,856 DEBUG   SystemMonitor:18845 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-04-18 23:06:46,856 INFO    HandlerThread:18845 [interfaces.py:finish():199] Joined cpu monitor
+2023-04-18 23:06:46,856 INFO    HandlerThread:18845 [interfaces.py:finish():199] Joined disk monitor
+2023-04-18 23:06:46,856 DEBUG   SystemMonitor:18845 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-04-18 23:06:46,856 DEBUG   SystemMonitor:18845 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-04-18 23:06:46,883 INFO    HandlerThread:18845 [interfaces.py:finish():199] Joined gpu monitor
+2023-04-18 23:06:46,884 INFO    HandlerThread:18845 [interfaces.py:finish():199] Joined memory monitor
+2023-04-18 23:06:46,884 INFO    HandlerThread:18845 [interfaces.py:finish():199] Joined network monitor
+2023-04-18 23:06:46,884 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,884 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-04-18 23:06:46,884 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 3
+2023-04-18 23:06:46,884 DEBUG   SenderThread:18845 [sender.py:send():336] send: stats
+2023-04-18 23:06:46,884 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,884 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-18 23:06:46,884 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,884 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 4
+2023-04-18 23:06:46,885 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,885 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-18 23:06:46,885 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 5
+2023-04-18 23:06:46,885 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,885 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-18 23:06:46,885 DEBUG   SenderThread:18845 [sender.py:send():336] send: summary
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-18 23:06:46,885 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-04-18 23:06:46,885 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 6
+2023-04-18 23:06:46,886 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:46,886 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-18 23:06:46,886 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:46,886 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-04-18 23:06:46,889 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: status_report
+2023-04-18 23:06:47,270 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 7
+2023-04-18 23:06:47,270 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:47,270 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-18 23:06:47,270 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:47,271 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-04-18 23:06:47,309 INFO    wandb-upload_0:18845 [upload_job.py:push():138] Uploaded file /tmp/tmphhfuz04xwandb/npzva4d6-wandb-metadata.json
+2023-04-18 23:06:47,635 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-18 23:06:47,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/config.yaml
+2023-04-18 23:06:47,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-summary.json
+2023-04-18 23:06:47,670 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_created():278] file/dir created: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/output.log
+2023-04-18 23:06:48,858 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 8
+2023-04-18 23:06:48,858 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: poll_exit
+2023-04-18 23:06:48,858 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:48,858 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-18 23:06:48,858 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:48,858 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-04-18 23:06:48,863 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 9
+2023-04-18 23:06:48,864 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:48,864 DEBUG   SenderThread:18845 [sender.py:send():336] send: artifact
+2023-04-18 23:06:48,864 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-18 23:06:49,671 INFO    Thread-13 :18845 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/output.log
+2023-04-18 23:06:50,301 INFO    SenderThread:18845 [sender.py:send_artifact():1428] sent artifact job-https___github.com_qcqced123_UPPPM.git_train.py - {'id': 'QXJ0aWZhY3Q6NDI3Mzk5NzIx', 'digest': '68ad43f8a1d3d2afcaefe1acabcf17bb', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_qcqced123_UPPPM.git_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_qcqced123_UPPPM.git_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYzMDE0MTMw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDI3Mzk5NzIx', 'versionIndex': 0}}, 'version': 'v0'}
+2023-04-18 23:06:50,302 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:50,302 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-04-18 23:06:50,302 INFO    SenderThread:18845 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-18 23:06:50,671 INFO    SenderThread:18845 [dir_watcher.py:finish():395] scan: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files
+2023-04-18 23:06:50,671 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/conda-environment.yaml conda-environment.yaml
+2023-04-18 23:06:50,671 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-summary.json wandb-summary.json
+2023-04-18 23:06:50,674 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-metadata.json wandb-metadata.json
+2023-04-18 23:06:50,674 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/output.log output.log
+2023-04-18 23:06:50,675 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/requirements.txt requirements.txt
+2023-04-18 23:06:50,677 INFO    SenderThread:18845 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/config.yaml config.yaml
+2023-04-18 23:06:50,677 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 10
+2023-04-18 23:06:50,679 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:50,679 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-18 23:06:50,681 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:50,681 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-04-18 23:06:50,681 INFO    SenderThread:18845 [file_pusher.py:finish():164] shutting down file pusher
+2023-04-18 23:06:51,249 INFO    wandb-upload_2:18845 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/output.log
+2023-04-18 23:06:51,322 INFO    wandb-upload_3:18845 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/requirements.txt
+2023-04-18 23:06:51,350 INFO    wandb-upload_0:18845 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/conda-environment.yaml
+2023-04-18 23:06:51,354 INFO    wandb-upload_1:18845 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/wandb-summary.json
+2023-04-18 23:06:51,391 INFO    wandb-upload_4:18845 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/files/config.yaml
+2023-04-18 23:06:51,591 INFO    Thread-12 :18845 [sender.py:transition_state():587] send defer: 11
+2023-04-18 23:06:51,592 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:51,592 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-18 23:06:51,592 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:51,592 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-04-18 23:06:51,592 INFO    SenderThread:18845 [file_pusher.py:join():169] waiting for file pusher
+2023-04-18 23:06:51,592 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 12
+2023-04-18 23:06:51,592 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:51,592 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-18 23:06:51,593 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:51,593 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-04-18 23:06:51,835 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 13
+2023-04-18 23:06:51,835 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:51,835 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-18 23:06:51,835 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:51,835 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-04-18 23:06:51,835 INFO    SenderThread:18845 [sender.py:transition_state():587] send defer: 14
+2023-04-18 23:06:51,835 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: defer
+2023-04-18 23:06:51,836 DEBUG   SenderThread:18845 [sender.py:send():336] send: final
+2023-04-18 23:06:51,836 INFO    HandlerThread:18845 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-18 23:06:51,836 DEBUG   SenderThread:18845 [sender.py:send():336] send: footer
+2023-04-18 23:06:51,836 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: defer
+2023-04-18 23:06:51,836 INFO    SenderThread:18845 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-04-18 23:06:51,836 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-18 23:06:51,836 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: poll_exit
+2023-04-18 23:06:51,836 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: server_info
+2023-04-18 23:06:51,837 DEBUG   SenderThread:18845 [sender.py:send_request():363] send_request: server_info
+2023-04-18 23:06:51,837 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-18 23:06:51,838 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-18 23:06:52,070 INFO    MainThread:18845 [wandb_run.py:_footer_history_summary_info():3422] rendering history
+2023-04-18 23:06:52,070 INFO    MainThread:18845 [wandb_run.py:_footer_history_summary_info():3454] rendering summary
+2023-04-18 23:06:52,070 INFO    MainThread:18845 [wandb_run.py:_footer_sync_info():3380] logging synced files
+2023-04-18 23:06:52,070 DEBUG   HandlerThread:18845 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-18 23:06:52,070 INFO    HandlerThread:18845 [handler.py:finish():842] shutting down handler
+2023-04-18 23:06:52,837 INFO    WriterThread:18845 [datastore.py:close():298] close: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230418_230638-snre9yid/run-snre9yid.wandb
+2023-04-18 23:06:53,070 INFO    SenderThread:18845 [sender.py:finish():1504] shutting down sender
+2023-04-18 23:06:53,070 INFO    SenderThread:18845 [file_pusher.py:finish():164] shutting down file pusher
+2023-04-18 23:06:53,070 INFO    SenderThread:18845 [file_pusher.py:join():169] waiting for file pusher

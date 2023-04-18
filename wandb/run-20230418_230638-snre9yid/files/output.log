@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 53, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 34, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 35, in train_loop
+    loader_train, loader_valid, train, valid_labels = train_input.make_batch(fold)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 32, in make_batch
+    valid_labels = valid['scores'].explode().to_numpy(dtypes=float)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/pandas/core/base.py", line 533, in to_numpy
+    raise TypeError(
+TypeError: to_numpy() got an unexpected keyword argument 'dtypes'

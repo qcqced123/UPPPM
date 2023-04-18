@@ -1,0 +1,1 @@
+{"<epoch> Train Loss": 0.666958749294281, "<epoch> Valid Loss": 0.668435275554657, "<epoch> Pearson Score": 0.3505240426852804, "<epoch> Gradient Norm": 60084.76953125, "<epoch> lr": 5e-06, "_timestamp": 1681830029.662779, "_runtime": 913.0621371269226, "_step": 1, "_wandb": {"runtime": 924}}

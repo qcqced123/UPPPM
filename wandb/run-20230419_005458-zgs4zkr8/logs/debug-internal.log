@@ -1,0 +1,95 @@
+2023-04-19 00:54:58,084 INFO    StreamThr :23508 [internal.py:wandb_internal():87] W&B internal server running at pid: 23508, started at: 2023-04-19 00:54:58.084686
+2023-04-19 00:54:58,085 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: status
+2023-04-19 00:54:58,088 INFO    WriterThread:23508 [datastore.py:open_for_write():85] open: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/run-zgs4zkr8.wandb
+2023-04-19 00:54:58,088 DEBUG   SenderThread:23508 [sender.py:send():336] send: header
+2023-04-19 00:54:58,106 DEBUG   SenderThread:23508 [sender.py:send():336] send: run
+2023-04-19 00:55:03,107 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:08,108 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:13,109 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:18,110 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:23,111 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:28,112 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:31,821 INFO    SenderThread:23508 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/home/qcqced/anaconda3/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/qcqced/anaconda3/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/home/qcqced/anaconda3/lib/python3.9/ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/qcqced/anaconda3/lib/python3.9/ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 243, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=10)
+2023-04-19 00:55:33,113 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:38,114 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:43,114 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:48,115 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:53,117 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: keepalive
+2023-04-19 00:55:58,117 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: cancel
+2023-04-19 00:55:58,118 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: cancel
+2023-04-19 00:55:58,399 INFO    SenderThread:23508 [dir_watcher.py:__init__():219] watching files in: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/files
+2023-04-19 00:55:58,399 INFO    SenderThread:23508 [sender.py:_start_run_threads():1078] run started: zgs4zkr8 with start time 1681833298.085076
+2023-04-19 00:55:58,399 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: status_report
+2023-04-19 00:56:00,139 DEBUG   HandlerThread:23508 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-19 00:56:00,139 INFO    HandlerThread:23508 [handler.py:finish():842] shutting down handler
+2023-04-19 00:56:00,400 INFO    SenderThread:23508 [sender.py:finish():1504] shutting down sender
+2023-04-19 00:56:00,400 INFO    SenderThread:23508 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-19 00:56:00,400 INFO    WriterThread:23508 [datastore.py:close():298] close: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/run-zgs4zkr8.wandb
+2023-04-19 00:56:01,400 INFO    SenderThread:23508 [dir_watcher.py:finish():395] scan: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/files
+2023-04-19 00:56:01,400 INFO    SenderThread:23508 [dir_watcher.py:finish():409] scan save: /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/files/config.yaml config.yaml
+2023-04-19 00:56:01,400 INFO    SenderThread:23508 [file_pusher.py:finish():164] shutting down file pusher
+2023-04-19 00:56:01,400 INFO    SenderThread:23508 [file_pusher.py:join():169] waiting for file pusher
+2023-04-19 00:56:02,180 INFO    wandb-upload_0:23508 [upload_job.py:push():138] Uploaded file /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_005458-zgs4zkr8/files/config.yaml

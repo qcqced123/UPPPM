@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 53, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 34, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 35, in train_loop
+    loader_train, loader_valid, train, valid_labels = train_input.make_batch(fold)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 35, in make_batch
+    valid_labels = np.array([ast.literal_eval(val_list) for val_list in tmp_valid])
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 35, in <listcomp>
+    valid_labels = np.array([ast.literal_eval(val_list) for val_list in tmp_valid])
+  File "/home/qcqced/anaconda3/lib/python3.9/ast.py", line 105, in literal_eval
+    return _convert(node_or_string)
+  File "/home/qcqced/anaconda3/lib/python3.9/ast.py", line 104, in _convert
+    return _convert_signed_num(node)
+  File "/home/qcqced/anaconda3/lib/python3.9/ast.py", line 78, in _convert_signed_num
+    return _convert_num(node)
+  File "/home/qcqced/anaconda3/lib/python3.9/ast.py", line 69, in _convert_num
+    _raise_malformed_node(node)
+  File "/home/qcqced/anaconda3/lib/python3.9/ast.py", line 66, in _raise_malformed_node
+    raise ValueError(f'malformed node or string: {node!r}')
+ValueError: malformed node or string: <ast.Name object at 0x7f421d0baac0>
+                     anchor context  ...                                       context_text fold
+0                 abatement     A47  ...  human necessities;furniture; domestic articles...    0
+1                 abatement     A61  ...  human necessities;medical or veterinary scienc...    0
+2                 abatement     A62  ...  human necessities;life-saving; fire-fighting [...    0
+3                 abatement     C01  ...  chemistry; metallurgy;inorganic chemistry [SEP...    0
+4                 abatement     F16  ...  mechanical engineering; lighting; heating; wea...    0
+..                      ...     ...  ...                                                ...  ...
+350  wire grid polarization     B29  ...  performing operations; transporting;working of...    0
+351  wire grid polarization     G01  ...  physics;measuring; testing [SEP] spectrum,manu...    0
+352  wire grid polarization     G02  ...  physics;optics [SEP] manufactur,side,compound,...    0
+353  wire grid polarization     H01  ...  electricity;basic electric elements [SEP] manu...    0
+354  wire grid polarization     H04  ...  electricity;electric communication technique [...    0
+[355 rows x 7 columns]

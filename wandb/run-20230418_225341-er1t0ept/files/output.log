@@ -1,0 +1,106 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['mask_predictions.classifier.weight', 'mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.dense.bias', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.classifier.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[1/20] Train & Validation
+/home/qcqced/anaconda3/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  grad_norm = torch.nn.utils.clip_grad_norm(                                                                                    | 0/84 [00:00<?, ?it/s]
+/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:139: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traceback (most recent call last):█████████████████████████████████████████████████████████████████████████████████████| 23/23 [00:39<00:00,  1.32s/it]
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 52, in <module>
+    # cli_config = ConfigParser.from_args(args, options)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 33, in main
+    else:
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 45, in train_loop
+    valid_loss, epoch_score = train_input.valid_fn(
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 184, in valid_fn
+    epoch_score = val_metrics(valid_labels, np.array(reduce(lambda a, b: a + b, preds_list)))
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/model/metric.py", line 36, in forward
+    vy = y - np.mean(y)
+  File "<__array_function__ internals>", line 5, in mean
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py", line 3440, in mean
+    return _methods._mean(a, axis=axis, dtype=dtype,
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/numpy/core/_methods.py", line 191, in _mean
+    ret = ret / rcount
+TypeError: ufunc 'true_divide' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''

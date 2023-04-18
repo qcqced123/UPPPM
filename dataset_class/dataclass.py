@@ -41,7 +41,6 @@ class UPPPMDataset(Dataset):
         2) apply data augment
             - shuffle target values
         """
-        add_special_token(self.cfg)
         scores = np.array(ast.literal_eval(self.score_list[idx]))  # len(scores) == target count
         target_mask = np.zeros(self.cfg.max_len)
         targets = np.array(ast.literal_eval(self.target_list[idx]))

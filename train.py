@@ -1,3 +1,4 @@
+import os
 import optuna
 import argparse, collections
 from omegaconf import OmegaConf
@@ -8,14 +9,16 @@ from parse_config import ConfigParser
 from configuration import CFG
 from utils.helper import check_library, all_type_seed
 from utils import sync_config
-
+from dataset_class.text_preprocessing import add_special_token
 
 check_library(True)
 all_type_seed(CFG, True)
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
 
 def main(config_path: str, cfg) -> None:
     sync_config(OmegaConf.load(config_path))  # load json config
+    add_special_token(cfg)  # add special token
     # cfg = OmegaConf.structured(CFG)
     # OmegaConf.merge(cfg)  # merge with cli_options
     if cfg.optuna:
