@@ -23,6 +23,7 @@ def kfold(df: pd.DataFrame, cfg) -> pd.DataFrame:
 
 
 def stratified_groupkfold(df: pd.DataFrame, cfg) -> pd.DataFrame:
+    """ sklearn Stratified Group KFold """
     fold = StratifiedGroupKFold(
         n_splits=cfg.n_folds,
         shuffle=True,
