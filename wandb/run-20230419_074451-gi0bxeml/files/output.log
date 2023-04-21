@@ -1,0 +1,32 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight', 'mask_predictions.LayerNorm.bias', 'mask_predictions.dense.weight', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'mask_predictions.classifier.weight', 'mask_predictions.dense.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.dense.bias', 'lm_predictions.lm_head.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[1/30] Train & Validation
+/home/qcqced/anaconda3/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+                                                                                                                                                      /home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py:141: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  grad_norm = torch.nn.utils.clip_grad_norm(                                                                                 | 0/1344 [00:00<?, ?it/s]
+
+
+
+
+Traceback (most recent call last):                                                                                  | 20/1344 [00:09<10:19,  2.14it/s]
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 53, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 34, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 41, in train_loop
+    train_loss, grad_norm, lr = train_input.train_fn(
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 124, in train_fn
+    loss = criterion(preds.view(-1, 1), labels.view(-1, 1))
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/model/loss.py", line 121, in forward
+    return criterion(y_pred, y_true)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 720, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/functional.py", line 3163, in binary_cross_entropy_with_logits
+    raise ValueError("Target size ({}) must be the same as input size ({})".format(target.size(), input.size()))
+ValueError: Target size (torch.Size([512, 1])) must be the same as input size (torch.Size([493, 1]))

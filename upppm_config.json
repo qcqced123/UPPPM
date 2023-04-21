@@ -22,10 +22,10 @@
         "num_workers": 0
     },
     "data_settings": {
-        "n_folds": 5,
-        "max_len": 400,
-        "epochs": 30,
-        "batch_size": 1
+        "n_folds": 4,
+        "max_len": 640,
+        "epochs": 24,
+        "batch_size": 32
     },
     "gradient_settings": {
         "amp_scaler": false,
@@ -45,7 +45,7 @@
     "optimizer_options": {
         "optimizer": "AdamW",
         "llrd": true,
-        "layerwise_lr": 1e-5,
+        "layerwise_lr": 2e-5,
         "layerwise_lr_decay": 0.9,
         "layerwise_weight_decay": 1e-2,
         "layerwise_adam_epsilon": 1e-6,
@@ -61,7 +61,7 @@
     "swa_options": {
         "swa": true,
         "swa_lr": 5e-6,
-        "anneal_epochs": 2,
+        "anneal_epochs": 1,
         "anneal_strategy": "cos"
     },
     "model_utils": {

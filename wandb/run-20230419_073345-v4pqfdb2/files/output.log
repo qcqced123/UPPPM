@@ -275,3 +275,55 @@ Some weights of the model checkpoint at microsoft/deberta-v3-large were not used
 
 
 
+
+
+
+
+
+
+/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+
+
+
+
+
+
+
+
+ 97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▌   | 344/355 [00:16<00:00, 21.74it/s]
+[1/30] Train Loss: 0.6338000297546387
+[1/30] Valid Loss: 0.6090999841690063
+[1/30] Pearson Score: 0.7366
+[1/30] Gradient Norm: 52.97919845581055
+[1/30] lr: 3.3333333333333333e-06
+[Update] Valid Score : (-inf => 0.7366) Save Parameter
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▎| 353/355 [00:16<00:00, 21.73it/s]
+  0%|                                                                                                                        | 0/1344 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traceback (most recent call last):                                                                                  | 66/1344 [00:27<09:02,  2.36it/s]
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 53, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 34, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 41, in train_loop
+    train_loss, grad_norm, lr = train_input.train_fn(
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 132, in train_fn
+    scaler.scale(loss).backward()
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

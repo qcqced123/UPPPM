@@ -26,7 +26,7 @@ class UPPPMDataset(Dataset):
             padding='max_length',
             truncation=True,
             return_tensors=None,
-            add_special_tokens=True,
+            add_special_tokens=False,
         )
         return inputs
 
@@ -42,7 +42,6 @@ class UPPPMDataset(Dataset):
             - shuffle target values
         """
         scores = np.array(ast.literal_eval(self.score_list[idx]))  # len(scores) == target count
-        target_mask = np.zeros(self.cfg.max_len)
         targets = np.array(ast.literal_eval(self.target_list[idx]))
 
         # Data Augment for train stage: shuffle target value's position index
@@ -59,6 +58,11 @@ class UPPPMDataset(Dataset):
 
         # tokenizing & make label list
         inputs = self.tokenizing(text)
+        target_mask = np.zeros(self.cfg.max_len)
+        #target_mask = np.zeros(len([token for token in inputs['input_ids'] if token != 0]))
+        # label = torch.full(
+        #     [len([token for token in inputs['input_ids'] if token != 0])], -1, dtype=torch.float
+        # )
         label = torch.full([self.cfg.max_len], -1, dtype=torch.float)
         cnt_tar, cnt_sep, nth_target, prev_i = 0, 0, -1, -1
         for i, input_id in enumerate(inputs['input_ids']):

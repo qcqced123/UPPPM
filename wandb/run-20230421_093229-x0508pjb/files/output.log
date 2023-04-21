@@ -1,0 +1,320 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['lm_predictions.lm_head.bias', 'mask_predictions.LayerNorm.bias', 'mask_predictions.classifier.bias', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.classifier.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.dense.bias', 'mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.dense.weight', 'mask_predictions.dense.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/home/qcqced/anaconda3/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  0%|                                                                                                                          | 0/41 [00:00<?, ?it/s]
+  grad_norm = torch.nn.utils.clip_grad_norm(                                                                                   | 0/41 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:20<00:00,  1.27s/it]
+[1/24] Train Loss: 0.6474999785423279
+[1/24] Valid Loss: 0.6087999939918518
+[1/24] Pearson Score: 0.64
+[1/24] Gradient Norm: 35.26729965209961
+[1/24] lr: 8.341810783316379e-06
+[Update] Valid Score : (-inf => 0.6400) Save Parameter
+Best Score: 0.6399872790896171
+  0%|                                                                                                                          | 0/41 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [04:52<00:00,  7.09s/it]
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:20<00:00,  1.28s/it]
+[2/24] Train Loss: 0.595300018787384
+[2/24] Valid Loss: 0.5656999945640564
+[2/24] Pearson Score: 0.7676
+[2/24] Gradient Norm: 78.168701171875
+[2/24] lr: 1.6683621566632758e-05
+[Update] Valid Score : (0.6400 => 0.7676) Save Parameter
+Best Score: 0.7676109821885799
+  0%|                                                                                                                          | 0/41 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [04:51<00:00,  7.02s/it]
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:20<00:00,  1.26s/it]
+[3/24] Train Loss: 0.5717999935150146
+[3/24] Valid Loss: 0.5579000115394592
+[3/24] Pearson Score: 0.7992
+[3/24] Gradient Norm: 112.98770141601562
+[3/24] lr: 1.9846532076672343e-05
+[Update] Valid Score : (0.7676 => 0.7992) Save Parameter
+Best Score: 0.7992220392702725
+  0%|                                                                                                                          | 0/41 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [04:50<00:00,  7.03s/it]
+
+
+
+
+
+
+
+
+
+ 85%|███████████████████████████████████████████████████████████████████████████████████████████████▌                 | 11/13 [00:18<00:03,  1.71s/it]
+[4/24] Train Loss: 0.5559999942779541
+[4/24] Valid Loss: 0.5475999712944031
+[4/24] Pearson Score: 0.8123
+[4/24] Gradient Norm: 132.4709014892578
+[4/24] lr: 1.8931007819078825e-05
+[Update] Valid Score : (0.7992 => 0.8123) Save Parameter
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:20<00:00,  1.26s/it]
+[5/24] Train & Validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 41/41 [04:50<00:00,  7.03s/it]
+
+
+
+
+
+
+
+
+
+ 85%|███████████████████████████████████████████████████████████████████████████████████████████████▌                 | 11/13 [00:18<00:03,  1.73s/it]
+[5/24] Train Loss: 0.54830002784729
+[5/24] Valid Loss: 0.5449000000953674
+[5/24] Pearson Score: 0.8227
+[5/24] Gradient Norm: 148.7779998779297
+[5/24] lr: 1.7263574866522983e-05
+[Update] Valid Score : (0.8123 => 0.8227) Save Parameter
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:20<00:00,  1.28s/it]
+[6/24] Train & Validation
+
+
+
+
+
+
+
+
+
+
+
+

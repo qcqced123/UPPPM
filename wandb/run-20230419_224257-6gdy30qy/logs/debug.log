@@ -1,0 +1,35 @@
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Configure stats pid to 9376
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Loading settings from /home/qcqced/.config/wandb/settings
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Loading settings from /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/settings
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/qcqced/바탕화면/ML_Test/UPPPM/train.py'}
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_init.py:_log_setup():506] Logging user logs to /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_224257-6gdy30qy/logs/debug.log
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_init.py:_log_setup():507] Logging internal logs to /home/qcqced/바탕화면/ML_Test/UPPPM/wandb/run-20230419_224257-6gdy30qy/logs/debug-internal.log
+2023-04-19 22:42:57,884 INFO    MainThread:9376 [wandb_init.py:init():546] calling init triggers
+2023-04-19 22:42:57,885 INFO    MainThread:9376 [wandb_init.py:init():552] wandb.init called with sweep_config: {}
+config: {'amp_scaler': False, 'anneal_epochs': 2, 'anneal_strategy': 'cos', 'awp': False, 'awp_eps': 0.01, 'awp_lr': 0.0001, 'batch_scheduler': True, 'batch_size': 32, 'betas': [0.9, 0.999], 'cfg_name': 'CFG', 'checkpoint_dir': './saved/model/token_classification/', 'clipping_grad': True, 'competition': 'FBP3', 'dataset': 'UPPPMDataset', 'device': device(type='cuda', index=0), 'epochs': 12, 'freeze': False, 'gpu_id': 0, 'gradient_checkpoint': True, 'layerwise_adam_epsilon': 1e-06, 'layerwise_lr': 1e-05, 'layerwise_lr_decay': 0.9, 'layerwise_use_bertadam': False, 'layerwise_weight_decay': 0.01, 'llrd': True, 'loop': 'train_loop', 'loss_fn': 'BinaryCrossEntropyLoss', 'max_grad_norm': 1000, 'max_len': 512, 'metrics': 'PearsonScore', 'model': 'microsoft/deberta-v3-large', 'model_arch': 'TokenModel', 'n_folds': 5, 'n_gpu': 1, 'n_gradient_accumulation_steps': 1, 'name': 'UPPPMTrainer', 'nth_awp_start_epoch': 0, 'num_cycles': 2, 'num_freeze': 4, 'num_reinit': 5, 'num_workers': 0, 'optimizer': 'AdamW', 'optuna': False, 'pooling': 'GEMPooling', 'reduction': 'none', 'reinit': True, 'resume': False, 'scheduler': 'cosine_annealing', 'seed': 42, 'state_dict': '', 'stop_mode': 'max', 'swa': True, 'swa_lr': 5e-06, 'swa_start': 135, 'test': False, 'tokenizer': PreTrainedTokenizerFast(name_or_path='microsoft/deberta-v3-large', vocab_size=128000, model_max_len=1000000000000000019884624838656, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'bos_token': '[CLS]', 'eos_token': '[SEP]', 'unk_token': '[UNK]', 'sep_token': '[SEP]', 'pad_token': '[PAD]', 'cls_token': '[CLS]', 'mask_token': '[MASK]', 'additional_special_tokens': ['[TAR]']}), 'train': True, 'val_loss_fn': 'BinaryCrossEntropyLoss', 'wandb': True, 'warmup_ratio': 0.1}
+2023-04-19 22:42:57,885 INFO    MainThread:9376 [wandb_init.py:init():602] starting backend
+2023-04-19 22:42:57,885 INFO    MainThread:9376 [wandb_init.py:init():606] setting up manager
+2023-04-19 22:42:57,886 INFO    MainThread:9376 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-19 22:42:57,888 INFO    MainThread:9376 [wandb_init.py:init():613] backend started and connected
+2023-04-19 22:42:57,890 INFO    MainThread:9376 [wandb_init.py:init():701] updated telemetry
+2023-04-19 22:42:57,943 INFO    MainThread:9376 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-04-19 22:42:59,073 WARNING MainThread:9376 [wandb_init.py:init():1165] interrupted
+Traceback (most recent call last):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1144, in init
+    run = wi.init()
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 744, in init
+    result = run_init_handle.wait(
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/home/qcqced/anaconda3/lib/python3.9/threading.py", line 581, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/qcqced/anaconda3/lib/python3.9/threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2023-04-19 22:43:01,913 WARNING MsgRouterThr:9376 [router.py:message_loop():77] message_loop has been closed

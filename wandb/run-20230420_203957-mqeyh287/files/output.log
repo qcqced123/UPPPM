@@ -1,0 +1,97 @@
+Some weights of the model checkpoint at microsoft/deberta-v3-large were not used when initializing DebertaV2Model: ['mask_predictions.dense.bias', 'mask_predictions.classifier.weight', 'mask_predictions.classifier.bias', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.bias', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.dense.weight', 'mask_predictions.LayerNorm.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+/home/qcqced/anaconda3/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  0%|                                                                                                                      | 0/1311 [00:00<?, ?it/s]
+[1/24] Train & Validation
+torch.Size([1, 1024]) torch.Size([1, 1024])
+tensor([[0.0986],
+        [0.7036],
+        [0.0902],
+        ...,
+        [0.4661],
+        [0.6081],
+        [0.1975]], device='cuda:0', grad_fn=<ViewBackward0>) tensor([[-1.],
+        [-1.],
+        [-1.],
+        ...,
+        [-1.],
+        [-1.],
+  grad_norm = torch.nn.utils.clip_grad_norm(                                                                               | 0/1311 [00:00<?, ?it/s]
+  0%|▎                                                                                                             | 3/1311 [00:02<19:40,  1.11it/s]
+torch.Size([1, 1024]) torch.Size([1, 1024])
+tensor([[ 0.0524],
+        [ 0.1740],
+        [ 0.6733],
+        ...,
+        [ 0.3492],
+        [ 0.8059],
+        [-0.2261]], device='cuda:0', grad_fn=<ViewBackward0>) tensor([[-1.],
+        [-1.],
+        [-1.],
+        ...,
+        [-1.],
+        [-1.],
+        [-1.]], device='cuda:0')
+torch.Size([1, 1024]) torch.Size([1, 1024])
+tensor([[0.1017],
+        [0.8830],
+        [0.9430],
+        ...,
+        [0.0336],
+        [0.7494],
+        [0.7585]], device='cuda:0', grad_fn=<ViewBackward0>) tensor([[-1.],
+        [-1.],
+        [-1.],
+        ...,
+        [-1.],
+        [-1.],
+        [-1.]], device='cuda:0')
+torch.Size([1, 1024]) torch.Size([1, 1024])
+tensor([[0.3262],
+        [0.2711],
+        [0.5108],
+        ...,
+        [0.5656],
+        [0.1890],
+        [0.5881]], device='cuda:0', grad_fn=<ViewBackward0>) tensor([[-1.],
+        [-1.],
+        [-1.],
+        ...,
+        [-1.],
+        [-1.],
+Traceback (most recent call last):                                                                                 | 4/1311 [00:03<18:17,  1.19it/s]
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 53, in <module>
+    main('upppm_config.json', CFG)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/train.py", line 34, in main
+    getattr(train_loop, cfg.loop)(cfg)  # init object
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/train_loop.py", line 41, in train_loop
+    train_loss, grad_norm, lr = train_input.train_fn(
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/trainer/trainer.py", line 126, in train_fn
+    loss = criterion(preds.view(-1, 1), labels.view(-1, 1))
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/qcqced/바탕화면/ML_Test/UPPPM/model/loss.py", line 121, in forward
+    return criterion(y_pred, y_true)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 720, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/home/qcqced/anaconda3/lib/python3.9/site-packages/torch/nn/functional.py", line 3163, in binary_cross_entropy_with_logits
+    raise ValueError("Target size ({}) must be the same as input size ({})".format(target.size(), input.size()))
+ValueError: Target size (torch.Size([1024, 1])) must be the same as input size (torch.Size([1012, 1]))
+torch.Size([1, 1012]) torch.Size([1, 1024])
+tensor([[-0.0091],
+        [ 0.8227],
+        [ 0.5589],
+        ...,
+        [ 0.6467],
+        [-0.1482],
+        [-0.0897]], device='cuda:0', grad_fn=<ViewBackward0>) tensor([[-1.],
+        [-1.],
+        [-1.],
+        ...,
+        [-1.],
+        [-1.],
+        [-1.]], device='cuda:0')
