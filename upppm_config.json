@@ -23,9 +23,9 @@
     },
     "data_settings": {
         "n_folds": 4,
-        "max_len": 640,
-        "epochs": 24,
-        "batch_size": 32
+        "max_len": 1024,
+        "epochs": 12,
+        "batch_size": 1
     },
     "gradient_settings": {
         "amp_scaler": false,
@@ -45,7 +45,7 @@
     "optimizer_options": {
         "optimizer": "AdamW",
         "llrd": true,
-        "layerwise_lr": 2e-5,
+        "layerwise_lr": 5e-5,
         "layerwise_lr_decay": 0.9,
         "layerwise_weight_decay": 1e-2,
         "layerwise_adam_epsilon": 1e-6,
@@ -67,9 +67,9 @@
     "model_utils": {
         "stop_mode": "max",
         "freeze": true,
-        "num_freeze": 4,
+        "num_freeze": 6,
         "reinit": true,
-        "num_reinit": 2,
+        "num_reinit": 5,
         "awp": false,
         "nth_awp_start_epoch": 0,
         "awp_eps": 1e-2,

@@ -58,12 +58,12 @@ class UPPPMDataset(Dataset):
 
         # tokenizing & make label list
         inputs = self.tokenizing(text)
-        target_mask = np.zeros(self.cfg.max_len)
-        #target_mask = np.zeros(len([token for token in inputs['input_ids'] if token != 0]))
-        # label = torch.full(
-        #     [len([token for token in inputs['input_ids'] if token != 0])], -1, dtype=torch.float
-        # )
-        label = torch.full([self.cfg.max_len], -1, dtype=torch.float)
+        #target_mask = np.zeros(self.cfg.max_len)
+        target_mask = np.zeros(len([token for token in inputs['input_ids'] if token != 0]))
+        label = torch.full(
+            [len([token for token in inputs['input_ids'] if token != 0])], -1, dtype=torch.float
+        )
+        # label = torch.full([self.cfg.max_len], -1, dtype=torch.float)
         cnt_tar, cnt_sep, nth_target, prev_i = 0, 0, -1, -1
         for i, input_id in enumerate(inputs['input_ids']):
             if input_id == self.cfg.tokenizer.tar_token_id:

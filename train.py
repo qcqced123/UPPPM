@@ -14,6 +14,7 @@ from dataset_class.text_preprocessing import add_special_token
 check_library(True)
 all_type_seed(CFG, True)
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+os.environ['no_deprecation_warning'] = 'True'
 
 
 def main(config_path: str, cfg) -> None:
