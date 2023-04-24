@@ -85,30 +85,97 @@ class UPPPMDataset(Dataset):
         return inputs, target_mask, label
 
 
-class TestDataset(Dataset):
-    """ For Inference Dataset Class """
-    def __init__(self, cfg, tokenizer, df):
+class TestTokenDataset(Dataset):
+    """ For Test Stage in Token Classification Task """
+    def __init__(self, cfg, df, is_valid=False):
         super().__init__()
+        self.anchor_list = df['anchor'].values
+        self.target_list = df['targets'].values
+        self.context_list = df['context_text'].values
+        self.id_list = df['ids'].values
         self.cfg = cfg
-        self.tokenizer = tokenizer  # get from train.py
-        self.df = df
+        self.tokenizer = cfg.tokenizer
+        self.is_valid = is_valid
 
-    def tokenizing(self, text):
-        inputs = self.tokenizer(
+    def tokenizing(self, text: str) -> dict:
+        inputs = self.cfg.tokenizer(
             text,
             max_length=self.cfg.max_len,
             padding='max_length',
             truncation=True,
             return_tensors=None,
-            add_special_tokens=True,
+            add_special_tokens=False,
+        )
+        return inputs
+
+    def __len__(self) -> int:
+        return len(self.id_list)
+
+    def __getitem__(self, idx: int):
+        targets = np.array(self.target_list[idx])
+        text = self.cfg.tokenizer.cls_token + self.anchor_list[idx] + self.cfg.tokenizer.sep_token
+        for target in targets:
+            text += target + self.cfg.tokenizer.tar_token
+        text += self.context_list[idx] + self.cfg.tokenizer.sep_token
+
+        inputs = self.tokenizing(text)
+        target_mask = np.zeros(len([token for token in inputs['input_ids'] if token != 0]))
+        cnt_tar = 0
+        cnt_sep = 0
+        nth_target = -1
+        prev_i = -1
+
+        for i, input_id in enumerate(inputs['input_ids']):
+            if input_id == self.tokenizer.tar_token_id:
+                cnt_tar += 1
+                if cnt_tar == len(targets):
+                    break
+            if input_id == self.tokenizer.sep_token_id:
+                cnt_sep += 1
+
+            if cnt_sep == 1 and input_id not in [self.tokenizer.pad_token_id, self.tokenizer.sep_token_id,
+                                                 self.tokenizer.tar_token_id]:
+                if (i - prev_i) > 1:
+                    nth_target += 1
+                target_mask[i] = 1
+                prev_i = i
+        for k, v in inputs.items():
+            inputs[k] = torch.tensor(v)
+        return inputs, target_mask
+
+
+class TestSentenceDataset(Dataset):
+    """ For Test Stage in Sentence Task """
+    def __init__(self, cfg, df, is_valid=False):
+        super().__init__()
+        self.cfg = cfg
+        self.df = df
+        self.tokenizer = cfg.tokenizer
+        self.is_valid = is_valid
+
+    def tokenizing(self, text: str) -> dict:
+        inputs = self.cfg.tokenizer(
+            text,
+            max_length=self.cfg.max_len,
+            padding='max_length',
+            truncation=True,
+            return_tensors=None,
+            add_special_tokens=False,
         )
         for k, v in inputs.items():
             inputs[k] = torch.tensor(v)
         return inputs
 
-    def __len__(self):
-        return len(self.df)
+    def __len__(self) -> int:
+        return len(self.df.id)
 
-    def __getitem__(self, idx):
-        inputs = self.tokenizing(self.df.iloc[idx, 1])
+    def __getitem__(self, idx: int):
+        anchor = self.df.iloc[idx, 1]
+        target = self.df.iloc[idx, 2]
+        context_text = self.df.iloc[idx, 4]
+
+        text = self.cfg.tokenizer.cls_token + anchor + self.cfg.tokenizer.sep_token
+        text = text + target + context_text + self.cfg.tokenizer.sep_token
+        inputs = self.tokenizing(text)
+
         return inputs

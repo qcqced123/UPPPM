@@ -1,4 +1,5 @@
 import re, gc
+import torch
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import KFold, StratifiedGroupKFold
@@ -218,7 +219,7 @@ def add_special_token(cfg) -> None:
     cfg.tokenizer.save_pretrained(f'{cfg.checkpoint_dir}/tokenizer/')
 
 
-def upppm_preprocess(data_path, cfg) -> dict:
+def cpc_preprocess(data_path, cfg) -> dict:
     train_df = stratified_groupkfold(load_data(data_path), cfg)
     cpc_codes = pd.read_csv("./dataset/titles.csv", engine='python')
 
@@ -252,3 +253,27 @@ def upppm_preprocess(data_path, cfg) -> dict:
     title_group_df['context_text'] = title_group_df['section_title'] + ' [SEP] ' + title_group_df['norm_title']
     cpc_texts = dict(title_group_df[['section_class', 'context_text']].to_numpy().tolist())
     return cpc_texts
+
+
+def token_preprocess(test_path: str, cpc_path: str):
+    """ Preprocess for Token Classification """
+    test = pd.read_csv(test_path)
+    cpc_texts = torch.load(cpc_path)
+    test['context_text'] = test['context'].map(cpc_texts)
+    anchor_context_grouped_target = test.groupby(['anchor', 'context'])['target'].apply(list)
+    anchor_context_grouped_id = test.groupby(['anchor', 'context'])['id'].apply(list)
+    i = pd.DataFrame(anchor_context_grouped_id).reset_index()
+    t = pd.DataFrame(anchor_context_grouped_target).reset_index()
+    test = t.merge(i, on=['anchor', 'context'])
+    test['context_text'] = test['context'].map(cpc_texts)
+    test = test.rename(columns={'target': 'targets', 'id': 'ids'})
+    test['n_ids'] = test['ids'].map(len)
+    return test
+
+
+def sentence_preprocess(test_path: str, sentence_cpc_path: str):
+    """ Preprocess for Sentence Classification """
+    sentence_test = pd.read_csv(test_path)
+    cpc_texts = torch.load(sentence_cpc_path)
+    sentence_test['context_text'] = sentence_test['context'].map(cpc_texts)
+    return sentence_test
